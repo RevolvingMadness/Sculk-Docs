@@ -1,0 +1,20 @@
+site_name: Sculk Documentation
+
+theme:
+  name: material
+  logo: assets/logo.png
+  palette:
+    scheme: slate
+    primary: black
+  features:
+    - navigation.footer
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      name: Sculk Github
+      link: https://www.github.com/RevolvingMadness/Sculk
+
+markdown_extensions:
+  - tables
+  - attr_list
