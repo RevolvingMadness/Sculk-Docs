@@ -45,9 +45,7 @@ Represents a true or false value.
 
 ## CommandResult
 
-Represents the result of running a command. (Returned from [MinecraftServer.runCommand()](#minecraftserver))
-
-[](COME_BACK_TO_THIS)
+Represents the result of running a command. (Returned from [MinecraftServer.runCommand()](#runcommandcommand-string-commandresult))
 
 ### result: [Integer](#integer) | [Null](#null) {data-toc-label='result'}
 
