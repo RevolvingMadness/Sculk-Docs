@@ -43,6 +43,16 @@ Returns the slipperiness of the block.
 
 Represents a true or false value.
 
+Example:
+
+```dart
+var x = true;
+
+if (x) {
+    // will execute because x is true
+}
+```
+
 ## CommandResult
 
 Represents the result of running a command. (Returned from [MinecraftServer.runCommand()](#runcommandcommand-string-commandresult))
@@ -62,6 +72,20 @@ Whether the command succeeded. If the command succeeded the value will default t
 ## Dictionary
 
 Represents a dictionary.
+
+Example:
+
+```dart
+var x = {
+    "a": 1,
+    "b": 2,
+    "c": 3
+};
+
+print(x["a"]); // 1
+x["a"] = 0;
+print(x["a"]); // 0
+```
 
 ## Difficulties
 
@@ -331,6 +355,12 @@ Please see [Events](events.md) for information.
 ## Float
 
 Represents a floating point number.
+
+Example:
+
+```dart
+var x = 1.5;
+```
 
 ## Function
 
@@ -745,6 +775,10 @@ Sets the value of the maxLoops gamerule.
 
 Represents an integer value.
 
+Example:
+```dart
+var x = 1;
+```
 
 ## ItemStack
 
@@ -873,6 +907,12 @@ Returns whether the item is food.
 ## List
 
 Represents a list of items.
+
+```dart
+var list = [1, 2, 3];
+
+print(list[0]); // 1
+```
 
 ## LivingEntity
 
@@ -1028,7 +1068,12 @@ Returns the player with the name `name`.
 
 ## Resource
 
-Represents an identifier. It looks like `namespace:path`.
+Represents an identifier.
+
+Example:
+```dart
+var x = namespace:path;
+```
 
 ## ServerPlayerEntity
 
@@ -1064,8 +1109,14 @@ Sets the players experience points to `experience_points`.
 
 Represents a string.
 
+Example:
+```dart
+var x = "Hello, World!";
+```
+
 ## Type
 
+Represents the type of a class.
 
 ## Vec3d
 
