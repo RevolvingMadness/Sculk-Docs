@@ -896,6 +896,10 @@ Represents a method on a class.
 
 Represents the Minecraft Server.
 
+### runCommand(command: [String](#string)): [CommandResult](#commandresult) {data-toc-label='runCommand'}
+
+Runs the command `command`.
+
 ### setPVPEnabled(pvp_enabled: [Boolean](#boolean)): [Null](#null) {data-toc-label='setPVPEnabled'}
 
 Sets pvp to be enabled according to `pvp_enabled`.
