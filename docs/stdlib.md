@@ -1,5 +1,45 @@
 # Sculk's Standard Library
 
+## PI: [Float](#float) {data-toc-label='PI'}
+
+Represents PI.
+
+## server: [MinecraftServer](#minecraftserver) {data-toc-label='server'}
+
+An instance of [MinecraftServer](#minecraftserver).
+
+## playerManager: [PlayerManager](#playermanager) {data-toc-label='playerManager'}
+
+An instance of [PlayerManager](#playermanager).
+
+## gameRules: [GameRules](#gamerules) {data-toc-label='gameRules'}
+
+An instance of [GameRules](#gamerules).
+
+## events: [Events](#events) {data-toc-label='events'}
+
+An instance of [Events](#events).
+
+## overworld: [World](#world) {data-toc-label='overworld'}
+
+The overworld dimension. An instance of [World](#world).
+
+## nether: [World](#world) {data-toc-label='nether'}
+
+The nether dimension. An instance of [World](#world).
+
+## end: [World](#world) {data-toc-label='end'}
+
+The end dimension. An instance of [World](#world).
+
+## print(value: [Object](#object)): [Null](#null) {data-toc-label='print'}
+
+Prints `value` to the chat.
+
+## type(object: [Object](#object)): [String](#string) {data-toc-label='type'}
+
+Returns the type of `object`.
+
 ## BlockPos
 
 Represents the position of a block in a three-dimensional volume.
@@ -266,7 +306,7 @@ Returns whether the entity is touching water or rain.
 
 ### isWet(): [Boolean](#boolean) {data-toc-label='isWet'}
 
-Returns whether this entity is touching water, being rained on, or is inside a bubble column.
+Returns whether the entity is touching water, being rained on, or is inside a bubble column.
 
 ### kill(): [Null](#null) {data-toc-label='kill'}
 
