@@ -17,7 +17,7 @@ This event is not cancellable.
 events.onPlaceBlock(function(entity, block) {});
 ```
 
-## Player Attack Entity
+## Player Attack Entity Event
 
 Occurs when a player attacks an entity.
 
