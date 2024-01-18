@@ -605,13 +605,13 @@ Returns the value of the enderPearlsVanishOnDeath gamerule.
 
 ### getMaxArgumentCount(): [Integer](#integer) {data-toc-label='getMaxArgumentCount'}
 
-A custom gamerule created by sculk. See [Added Gamerules](added_gamerules.md) for more information.
+A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
 Returns the value of the maxArgumentCount gamerule.
 
 ### getMaxLoops(): [Integer](#integer) {data-toc-label='getMaxLoops'}
 
-A custom gamerule created by sculk. See [Added Gamerules](added_gamerules.md) for more information.
+A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
 Returns the value of the maxLoops gamerule.
 
@@ -801,13 +801,13 @@ Sets the value of the enderPearlsVanishOnDeath gamerule.
 
 ### setMaxArgumentCount(maxArgumentCount: [Integer](#integer)): [Null](#null) {data-toc-label='setMaxArgumentCount'}
 
-A custom gamerule created by sculk. See [Added Gamerules](added_gamerules.md) for more information.
+A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
 Sets the value of the maxArgumentCount gamerule.
 
 ### setMaxLoops(maxLoops: [Integer](#integer)): [Null](#null) {data-toc-label='setMaxLoops'}
 
-A custom gamerule created by sculk. See [Added Gamerules](added_gamerules.md) for more information.
+A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
 Sets the value of the maxLoops gamerule.
 
