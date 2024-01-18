@@ -1127,10 +1127,6 @@ Changes the players game mode based on `game_mode`.
 
 Drops the players selected item.
 
-### getIp(): [String](#string) {data-toc-label='getIp'}
-
-Returns the players IP address.
-
 ### getViewDistance(): [Integer](#integer) {data-toc-label='getViewDistance'}
 
 Returns the players view distance.
