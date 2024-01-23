@@ -40,6 +40,14 @@ Prints `value` to the chat.
 
 Returns the type of `object`.
 
+## base64decode(base64string: [String](#string)): [String](#string) {data-toc-label='base64decode'}
+
+Decodes `base64string` from base64.
+
+## base64encode(string: [String](#string)): [String](#string) {data-toc-label='base64encode'}
+
+Encodes `string` to base64.
+
 ## BlockPos
 
 Represents the position of a block in a three-dimensional volume.
@@ -156,13 +164,9 @@ Returns whether the entity can use portals.
 
 Dismounts the entity from any vehicle it's riding.
 
-### extinguish(): [Null](#null) {data-toc-label='extinguish'}
+### extinguish(play_sound: [Boolean](#boolean)): [Null](#null) {data-toc-label='extinguish'}
 
-Extinguishes the entity with no sound.
-
-### extinguishWithSound(): [Null](#null) {data-toc-label='extinguishWithSound'}
-
-Extinguishes the entity with sound.
+Extinguishes the entity. Plays sound if `play_sound` is true.
 
 ### getBlockPos(): [BlockPos](#blockpos) {data-toc-label='getBlockPos'}
 
@@ -312,6 +316,10 @@ Returns whether the entity is touching water, being rained on, or is inside a bu
 
 Kills the entity.
 
+### raycast(distance: [Float](#float), target: [Block](#block), check_fluids: [Boolean](#boolean)): [Boolean](#boolean) {data-toc-label='raycast'}
+
+Raycasts `distance` until it hits `target` and if `check_fluids` is true and it encounters a fluid it will stop.
+
 ### removeAllPassengers(): [Null](#null) {data-toc-label='removeAllPassengers'}
 
 Dismounts all passengers riding the entity.
@@ -383,6 +391,22 @@ Makes the entity stop riding its vehicle.
 ### teleport(x: [Float](#float), y: [Float](#float), z: [Float](#float)): [Null](#null) {data-toc-label='setPos'}
 
 Teleports the entity to `x`, `y`, and `z`.
+
+## EntityTypes
+
+A class that contains the type of every entity
+
+### get(identifier: [Resource](#resource)): [EntityType](#entitytype) {data-toc-label='get'}
+
+Gets the entity type of the `identifier`.
+
+## EntityType
+
+The type of an entity.
+
+### isFireImmune: [Boolean](#boolean) {data-toc-label='isFireImmune'}
+
+Whether the entity is fire immune.
 
 ## Enum
 
@@ -953,6 +977,10 @@ var list = [1, 2, 3];
 
 print(list[0]); // 1
 ```
+
+### contains(object: [Object](#object)): [Boolean](#boolean) {data-toc-label='contains'}
+
+Returns whether `object` is in the list.
 
 ## LivingEntity
 
