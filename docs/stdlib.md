@@ -53,11 +53,17 @@ Encodes `string` to base64.
 Represents the position of a block in a three-dimensional volume.
 Each coordinate is integer based.
 
-| Field Name | Type                | Description                   |
-|------------|---------------------|-------------------------------|
-| `x`        | [Integer](#integer) | The x coordinate of the block |
-| `y`        | [Integer](#integer) | The y coordinate of the block |
-| `z`        | [Integer](#integer) | The z coordinate of the block |
+### x: [Float](#float) {data-toc-label='x'}
+
+The x coordinate of the block.
+
+### y: [Float](#float) {data-toc-label='y'}
+
+The y coordinate of the block.
+
+### z: [Float](#float) {data-toc-label='z'}
+
+The z coordinate of the block.
 
 ## Blocks
 
@@ -115,7 +121,7 @@ Whether the command succeeded.
 
 ### errorMessage: [String](#string) | [Null](#null) {data-toc-label='errorMessage'}
 
-Whether the command succeeded. If the command succeeded the value will default to [Null](#null).
+The error message of the command. If the command succeeded the value will default to [Null](#null).
 
 ## Dictionary
 
@@ -930,7 +936,6 @@ Sets the damage (lost durability) of the item.
 
 Sets the repair cost of the item.
 
-
 ## Items
 
 A class that contains every modded and unmodded item.
@@ -966,7 +971,6 @@ Returns whether the item is fireproof.
 ### isFood(): [Boolean](#boolean) {data-toc-label='isFood'}
 
 Returns whether the item is food.
-
 
 ## List
 
@@ -1013,7 +1017,6 @@ Sets pvp to be enabled according to `pvp_enabled`.
 ### setDifficultyLocked(difficulty_locked: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDifficultyLocked'}
 
 Sets the difficulty to be locked according to `difficulty_locked`.
-
 
 ### isPVPEnabled(): [Boolean](#boolean) {data-toc-label='isPVPEnabled'}
 
@@ -1133,7 +1136,6 @@ Sets whitelist to be enabled according to `whitelist_enabled`.
 
 Returns the player with the name `name`.
 
-
 ## Resource
 
 Represents an identifier.
@@ -1167,8 +1169,6 @@ Sets the players experience levels to `experience_levels`.
 
 Sets the players experience points to `experience_points`.
 
-
-
 ## String
 
 Represents a string.
@@ -1186,12 +1186,17 @@ Represents the type of a class.
 
 Represents a 3D vector. Similar to [BlockPos](#blockpos) except values are float based.
 
-| Field Name | Type            | Description      |
-|------------|-----------------|------------------|
-| `x`        | [Float](#float) | The x coordinate |
-| `y`        | [Float](#float) | The y coordinate |
-| `z`        | [Float](#float) | The z coordinate |
+### x: [Float](#float) {data-toc-label='x'}
 
+The x coordinate.
+
+### y: [Float](#float) {data-toc-label='y'}
+
+The y coordinate.
+
+### z: [Float](#float) {data-toc-label='z'}
+
+The z coordinate.
 
 ## World
 
