@@ -48,6 +48,34 @@ Decodes `base64string` from base64.
 
 Encodes `string` to base64.
 
+## abs(number: [Integer](#integer) | [Float](#float)): [Integer](#integer) | [Float](#float) {data-toc-label='abs'}
+
+Returns the absolute value of `number`.
+
+## ceil(number: [Integer](#integer) | [Float](#float)): [Integer](#integer) | [Float](#float) {data-toc-label='ceil'}
+
+Returns the ceiling value of `number`.
+
+## floor(number: [Integer](#integer) | [Float](#float)): [Integer](#integer) | [Float](#float) {data-toc-label='floor'}
+
+Returns the floor value of `number`.
+
+## BlockHitResult
+
+Represents the result of raycasting.
+
+### pos: [BlockPos](#blockpos) {data-toc-label='pos'}
+
+The pos where the ray hit.
+
+### block: [Block](#block) {data-toc-label='block'}
+
+The block where the ray hit.
+
+### succeeded: [Boolean](#boolean) {data-toc-label='succeeded'}
+
+Whether the raycast was successful.
+
 ## BlockPos
 
 Represents the position of a block in a three-dimensional volume.
@@ -66,8 +94,6 @@ The y coordinate of the block.
 The z coordinate of the block.
 
 ## Blocks
-
-A class that contains every modded and unmodded block.
 
 ### get(blockID: [Resource](#resource)): [Block](#block) {data-toc-label='get'}
 
@@ -322,7 +348,7 @@ Returns whether the entity is touching water, being rained on, or is inside a bu
 
 Kills the entity.
 
-### raycast(distance: [Float](#float), target: [Block](#block), check_fluids: [Boolean](#boolean)): [Boolean](#boolean) {data-toc-label='raycast'}
+### raycast(distance: [Float](#float), target: [Block](#block), check_fluids: [Boolean](#boolean)): [BlockHitResult](#blockhitresult) {data-toc-label='raycast'}
 
 Raycasts `distance` until it hits `target` and if `check_fluids` is true and it encounters a fluid it will stop.
 
@@ -400,8 +426,6 @@ Teleports the entity to `x`, `y`, and `z`.
 
 ## EntityTypes
 
-A class that contains the type of every entity
-
 ### get(identifier: [Resource](#resource)): [EntityType](#entitytype) {data-toc-label='get'}
 
 Gets the entity type of the `identifier`.
@@ -431,6 +455,10 @@ Example:
 ```dart
 var x = 1.5;
 ```
+
+### static parseFloat(float: [String](#string)): [Float](#float) {data-toc-label='static parseFloat'}
+
+Converts the string `float` into a float.
 
 ## Function
 
@@ -850,6 +878,10 @@ Example:
 var x = 1;
 ```
 
+### static parseInteger(integer: [String](#string)): [Integer](#integer) {data-toc-label='static parseInteger'}
+
+Converts the string `integer` into an integer.
+
 ## ItemStack
 
 Represents a stack of items.
@@ -938,8 +970,6 @@ Sets the repair cost of the item.
 
 ## Items
 
-A class that contains every modded and unmodded item.
-
 ### get(itemID: [Resource](#resource)): [Item](#item) {data-toc-label='get'}
 
 Gets the item from the given ID.
@@ -981,6 +1011,10 @@ var list = [1, 2, 3];
 
 print(list[0]); // 1
 ```
+
+### append(object: [Object](#object)): [Null](#null) {data-toc-label='append'}
+
+Appends `object` to the list.
 
 ### contains(object: [Object](#object)): [Boolean](#boolean) {data-toc-label='contains'}
 
@@ -1178,6 +1212,18 @@ Example:
 var x = "Hello, World!";
 ```
 
+### startsWith(prefix: [String](#string)): [Boolean](#boolean) {data-toc-label='startsWith'}
+
+Returns whether the string starts with `prefix`.
+
+### endsWith(suffix: [String](#string)): [Boolean](#boolean) {data-toc-label='endsWith'}
+
+Returns whether the string ends with `suffix`.
+
+### split(delimiter: [String](#string)): [List\[String\]](#list) {data-toc-label='split'}
+
+Splits the string into a list of strings with the delimiter `delimiter`.
+
 ## Type
 
 Represents the type of a class.
@@ -1202,9 +1248,17 @@ The z coordinate.
 
 Represents a world.
 
+### breakBlock(pos: [BlockPos](#blockpos), drop_items: [Boolean](#boolean)): [Null](#null) {data-toc-label='breakBlock'}
+
+Breaks the block at `pos` and drops the items if `drop_items` is true.
+
 ### canSetBlock(block_pos: [BlockPos](#blockpos)): [Boolean](#boolean) {data-toc-label='canSetBlock'}
 
 Returns whether a block can be placed at `block_pos`.
+
+### getBlock(pos: [BlockPos](#blockpos)): [Block](#block) {data-toc-label='getBlock'}
+
+Returns the block at `pos`.
 
 ### getTime(): [Integer](#integer) {data-toc-label='getTime'}
 
@@ -1258,6 +1312,6 @@ Sets the spawn position to `spawn_pos`.
 
 Sets the time of day to `time_of_day`.
 
-### setBlock(block_pos: [BlockPos](#blockpos), block: [Block](#block)): [Null](#null) {data-toc-label='setBlock'}
+### placeBlock(block_pos: [BlockPos](#blockpos), block: [Block](#block)): [Null](#null) {data-toc-label='setBlock'}
 
-Sets the block at `block_pos` to `block`.
+Places the block `block` at `block_pos`.

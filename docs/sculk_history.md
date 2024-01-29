@@ -88,3 +88,39 @@ var x = true;
 
 print(x ? "x is true" : "x is false");
 ```
+
+# 0.0.3
+
+## Added
+
+- [abs(number: Integer | Float): Object](stdlib.md#absnumber-integer--float-integer--float)
+- `String` is iterable
+- Data can be written to an entity
+- [String.startsWith(text: String): Boolean](stdlib.md#startswithprefix-string-boolean)
+- [String.endsWith(text: String): Boolean](stdlib.md#endswithsuffix-string-boolean)
+- `break` can now be used in switch statement
+- [String.split(splitter: String): List\[String\]](stdlib.md#splitdelimiter-string-liststring)
+- [Integer.parseInteger(integer: String): Integer](stdlib.md#static-parseintegerinteger-string-integer)
+- [Float.parseFloat(float: String): Float](stdlib.md#static-parsefloatfloat-string-float)
+- [ceil(number: Integer | Float): Integer](stdlib.md#ceilnumber-integer--float-integer--float)
+- [floor(number: Integer | Float): Integer](stdlib.md#floornumber-integer--float-integer--float)
+- [BlockHitResult](stdlib.md#blockhitresult)
+- [World.breakBlock(pos: BlockPos, drop_items: Boolean): Boolean](stdlib.md#breakblockpos-blockpos-drop_items-boolean-null)
+- [World.getBlock(pos: BlockPos): Block](stdlib.md#getblockpos-blockpos-block)
+- [List.append(object: Object): Null](stdlib.md#appendobject-object-null)
+
+### Changed
+
+- `events.onPlayerBreakBlock(function: Function[Boolean, PlayerEntity, Block]): Null` is
+  now `events.onPlayerBreakBlock(function: Function[Boolean, PlayerEntity, BlockPos, Block]): Null`
+- `World.setBlock` renamed to `World.placeBlock`
+- `maxArguments` renamed to `maxArgumentCount`
+
+### Fixed
+
+- String concatenation
+- Event registration not clearing on reload
+
+### Improved
+
+- Error messages

@@ -45,7 +45,7 @@ This event is cancellable.
 `block_broken` is of type `Block`.
 */
 
-events.onPlayerBreakBlock(function(player, block_broken) {});
+events.onPlayerBreakBlock(function(player, pos, block_broken) {});
 ```
 
 ## Player Craft Item Event
