@@ -95,6 +95,14 @@ The z coordinate of the block.
 
 ## Blocks
 
+### register(block: Block): [Block](#block) {data-toc-label='register'}
+
+Registers `block`. See [Registering Blocks](custom_content.md#blocks) for more details.
+
+### registerWithItem(block: Block): [Block](#block) {data-toc-label='registerWithItem'}
+
+Registers `block` and an item for the block. See [Registering Blocks](custom_content.md#blocks) for more details.
+
 ### get(blockID: [Resource](#resource)): [Block](#block) {data-toc-label='get'}
 
 Gets the block from the given ID.
@@ -886,6 +894,10 @@ Converts the string `integer` into an integer.
 
 Represents a stack of items.
 
+### init(item: [Item](#item), count: [Integer](#integer)): [ItemStack](#itemstack) {data-toc-label='init'}
+
+Initializes ItemStack.
+
 ### decrement(amount: [Integer](#integer)): [Null](#null) {data-toc-label='decrement'}
 
 Decrements the amount of items in the stack by `amount`.
@@ -982,6 +994,10 @@ Represents an item.
 
 Returns the max amount of items that can be in a stack.
 
+### register(item: Item): [Item](#item) {data-toc-label='register'}
+
+Registers `item`. See [Registering Items](custom_content.md#items) for more details.
+
 ### getMaxDamage(): [Integer](#integer) {data-toc-label='getMaxDamage'}
 
 Returns the durability of the item.
@@ -1015,6 +1031,10 @@ print(list[0]); // 1
 ### append(object: [Object](#object)): [Null](#null) {data-toc-label='append'}
 
 Appends `object` to the list.
+
+### toString(): [String](#string) {data-toc-label='toString'}
+
+Returns the list in string form.
 
 ### contains(object: [Object](#object)): [Boolean](#boolean) {data-toc-label='contains'}
 
@@ -1103,6 +1123,30 @@ Represents the player.
 ### addExperiencePoints(experience_points: [Integer](#integer)): [Null](#null) {data-toc-label='addExperiencePoints'}
 
 Adds `experience_points` amount of XP points to the player.
+
+### getEnderChestInventory(): [Inventory](#inventory) {data-toc-label='getEnderChestInventory'}
+
+Returns the players ender chest inventory.
+
+### setEnderChestInventory(inventory: [Inventory](#inventory)): [Null](#null) {data-toc-label='setEnderChestInventory'}
+
+Sets the players ender chest inventory.
+
+### getInventory(): [Inventory](#inventory) {data-toc-label='getInventory'}
+
+Returns the players inventory.
+
+### setInventory(inventory: [Inventory](#inventory)): [Null](#null) {data-toc-label='setInventory'}
+
+Sets the players inventory.
+
+### getStackInMainHand(): [ItemStack](#itemstack) {data-toc-label='getStackInMainHand'}
+
+Returns the item stack in the players main hand.
+
+### getStackInOffHand(): [ItemStack](#itemstack) {data-toc-label='getStackInOffHand'}
+
+Returns the item stack in the players offhand.
 
 ### addExperienceLevels(experience_levels: [Integer](#integer)): [Null](#null) {data-toc-label='addExperienceLevels'}
 
@@ -1210,7 +1254,12 @@ Represents a string.
 Example:
 ```dart
 var x = "Hello, World!";
+var unicode = "\u221A"; // √ (Square Root)
 ```
+
+### fromUnicode(unicode: [Integer](#integer)): [String](#string) {data-toc-label='startsWith'}
+
+Returns the unicode character from the unicode point `unicode`.
 
 ### startsWith(prefix: [String](#string)): [Boolean](#boolean) {data-toc-label='startsWith'}
 
@@ -1315,3 +1364,63 @@ Sets the time of day to `time_of_day`.
 ### placeBlock(block_pos: [BlockPos](#blockpos), block: [Block](#block)): [Null](#null) {data-toc-label='setBlock'}
 
 Places the block `block` at `block_pos`.
+
+## Inventory
+
+Represents an entity's inventory.
+
+### contains(item: [Item](#item)): [Boolean](#boolean) {data-toc-label='contains'}
+
+Returns whether the item is in the inventory.
+
+### count(item: [Item](#item)): [Integer](#integer) {data-toc-label='count'}
+
+Returns how many of `item` is in the inventory.
+
+### getStack(slot: [Integer](#integer)): [ItemStack](#itemstack) {data-toc-label='getStack'}
+
+Returns the stack in the slot `slot`.
+
+### isEmpty(): [Boolean](#boolean) {data-toc-label='isEmpty'}
+
+Returns whether the inventory is empty.
+
+### removeStack(stack: [ItemStack](#itemstack)): [Null](#null) {data-toc-label='removeStack'}
+
+Removes `stack` from the inventory.
+
+### setStack(slot: [Integer](#integer), stack: [ItemStack](#itemstack)): [Null](#null) {data-toc-label='setStack'}
+
+Sets the stack at slot `slot` to the stack `stack`.
+
+## GUI
+
+[//]: # (See [Adding a Custom GUI]&#40;gui.md&#41; for more details.)
+
+### getInventory(): [Inventory](#inventory) {data-toc-label='getInventory'}
+
+Returns the inventory of the GUI.
+
+### setInventory(inventory: [Inventory](#inventory)): [Null](#null) {data-toc-label='setInventory'}
+
+Sets the contents of the GUI to be `inventory`.
+
+### getTitle(): [String](#string) {data-toc-label='getTitle'}
+
+Returns the title of the GUI.
+
+### onSlotClick(slot: [Integer](#integer), button: [Integer](#integer), gui: [GUI](#gui), player: [PlayerEntity](#playerentity)): [Boolean](#boolean) {data-toc-label='onSlotClick'}
+
+This method is called when a user clicks a slot. This method is meant to be overridden.
+
+### onClose(player: [PlayerEntity](#playerentity), gui: [GUI](#gui)): [Null](#null) {data-toc-label='onClose'}
+
+This method is called when the user closes the GUI. This method is meant to be overridden.
+
+## ItemSettings
+
+See [Custom Items](custom_content.md#registering-the-item) for item settings.
+
+## BlockSettings
+
+See [Custom Blocks](custom_content.md#registering-the-block) for block settings.
