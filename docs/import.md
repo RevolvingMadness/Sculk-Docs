@@ -1,31 +1,32 @@
 # Import Statement
 
-To import a script type the following syntax.
+The import statement allows you to use code across multiple files.
 
-```dart title="bar.sk"
+```dart title="foo:bar"
 var a = 1;
 var b = 2;
-var c = 3;
 ```
 
-```dart title="load.sk"
-import foo:bar;
+```dart title="foo:load"
+import "foo:bar";
 
 print(a); // 1
 print(b); // 2
+print(c); // Error
 ```
 
 ## From Statement
 
-```dart title="bar.sk"
+```dart title="foo:bar"
 var a = 1;
 var b = 2;
 var c = 3;
 ```
 
-```dart title="load.sk"
-from foo:bar import a;
+```dart title="foo:load"
+from "foo:bar" import a, b;
 
 print(a); // 1
-print(b); // Error
+print(b); // 2
+print(c); // Error
 ```

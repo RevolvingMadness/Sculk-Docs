@@ -16,10 +16,6 @@ An instance of [PlayerManager](#playermanager).
 
 An instance of [GameRules](#gamerules).
 
-## events: [Events](#events) {data-toc-label='events'}
-
-An instance of [Events](#events).
-
 ## overworld: [World](#world) {data-toc-label='overworld'}
 
 The overworld dimension. An instance of [World](#world).
@@ -32,33 +28,41 @@ The nether dimension. An instance of [World](#world).
 
 The end dimension. An instance of [World](#world).
 
-## print(value: [Object](#object)): [Null](#null) {data-toc-label='print'}
+## print(value: [Object](#object)) -> [Null](#null) {data-toc-label='print'}
 
 Prints `value` to the chat.
 
-## type(object: [Object](#object)): [String](#string) {data-toc-label='type'}
+## type(object: [Object](#object)) -> [String](#string) {data-toc-label='type'}
 
 Returns the type of `object`.
 
-## base64decode(base64string: [String](#string)): [String](#string) {data-toc-label='base64decode'}
+## base64decode(base64string: [String](#string)) -> [String](#string) {data-toc-label='base64decode'}
 
 Decodes `base64string` from base64.
 
-## base64encode(string: [String](#string)): [String](#string) {data-toc-label='base64encode'}
+## base64encode(string: [String](#string)) -> [String](#string) {data-toc-label='base64encode'}
 
 Encodes `string` to base64.
 
-## abs(number: [Integer](#integer) | [Float](#float)): [Integer](#integer) | [Float](#float) {data-toc-label='abs'}
+## abs(number: [Number](#number)) -> [Number](#number)) {data-toc-label='abs'}
 
 Returns the absolute value of `number`.
 
-## ceil(number: [Integer](#integer) | [Float](#float)): [Integer](#integer) | [Float](#float) {data-toc-label='ceil'}
+## ceil(number: [Number](#number)) -> [Number](#number)) {data-toc-label='ceil'}
 
 Returns the ceiling value of `number`.
 
-## floor(number: [Integer](#integer) | [Float](#float)): [Integer](#integer) | [Float](#float) {data-toc-label='floor'}
+## floor(number: [Number](#number)) -> [Number](#number)) {data-toc-label='floor'}
 
 Returns the floor value of `number`.
+
+## randomInteger(integer: [Integer](#integer)) -> [Integer](#integer) {data-toc-label='randomInteger'}
+
+Returns a random integer between `min` and `max`, inclusive.
+
+## randomFloat(float: [Float](#float)) -> [Float](#float) {data-toc-label='randomFloat'}
+
+Returns a random float between `min` and `max`, inclusive.
 
 ## BlockHitResult
 
@@ -95,15 +99,15 @@ The z coordinate of the block.
 
 ## Blocks
 
-### register(block: Block): [Block](#block) {data-toc-label='register'}
+### register(block: Block) -> [Block](#block) {data-toc-label='register'}
 
 Registers `block`. See [Registering Blocks](custom_content.md#blocks) for more details.
 
-### registerWithItem(block: Block): [Block](#block) {data-toc-label='registerWithItem'}
+### registerWithItem(block: Block) -> [Block](#block) {data-toc-label='registerWithItem'}
 
 Registers `block` and an item for the block. See [Registering Blocks](custom_content.md#blocks) for more details.
 
-### get(blockID: [Resource](#resource)): [Block](#block) {data-toc-label='get'}
+### get(blockID: [String](#string)) -> [Block](#block) {data-toc-label='get'}
 
 Gets the block from the given ID.
 
@@ -111,19 +115,19 @@ Gets the block from the given ID.
 
 Represents a block.
 
-### asItem(): [Item](#item) {data-toc-label='asItem'}
+### asItem() -> [Item](#item) {data-toc-label='asItem'}
 
 Returns the block in item form.
 
-### getBlastResistance(): [Float](#float) {data-toc-label='getBlastResistance'}
+### getBlastResistance() -> [Float](#float) {data-toc-label='getBlastResistance'}
 
 Returns the blast resistance of the block.
 
-### getName(): [String](#string) {data-toc-label='getName'}
+### getName() -> [String](#string) {data-toc-label='getName'}
 
 Returns the name of the block.
 
-### getSlipperiness(): [Float](#float) {data-toc-label='getSlipperiness'}
+### getSlipperiness() -> [Float](#float) {data-toc-label='getSlipperiness'}
 
 Returns the slipperiness of the block.
 
@@ -188,253 +192,253 @@ Constants:
 
 ## Entity
 
-### addCommandTag(commandTag: [String](#string)): [Null](#null) {data-toc-label='addCommandTag'}
+### addTag(tag: [String](#string)) -> [Null](#null) {data-toc-label='addTag'}
 
-Adds the `commandTag` tag to the entity. Similar to `/tag add`
+Adds the `tag` tag to the entity. Similar to `/tag add`
 
-### canFreeze(): [Boolean](#boolean) {data-toc-label='canFreeze'}
+### canFreeze() -> [Boolean](#boolean) {data-toc-label='canFreeze'}
 
 Returns whether the entity can freeze.
 
-### canUsePortals(): [Boolean](#boolean) {data-toc-label='canUsePortals'}
+### canUsePortals() -> [Boolean](#boolean) {data-toc-label='canUsePortals'}
 
 Returns whether the entity can use portals.
 
-### dismountVehicle(): [Null](#null) {data-toc-label='dismountVehicle'}
+### dismount() -> [Null](#null) {data-toc-label='dismount'}
 
 Dismounts the entity from any vehicle it's riding.
 
-### extinguish(play_sound: [Boolean](#boolean)): [Null](#null) {data-toc-label='extinguish'}
+### extinguish(play_sound: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='extinguish'}
 
 Extinguishes the entity. Plays sound if `play_sound` is true.
 
-### getBlockPos(): [BlockPos](#blockpos) {data-toc-label='getBlockPos'}
+### getBlockPos() -> [BlockPos](#blockpos) {data-toc-label='getBlockPos'}
 
 Returns the block pos of the entity.
 
-### getBlockX(): [Integer](#integer) {data-toc-label='getBlockX'}
+### getBlockX() -> [Integer](#integer) {data-toc-label='getBlockX'}
 
 Returns the x coordinate of the entity.
 
-### getBlockY(): [Integer](#integer) {data-toc-label='getBlockY'}
+### getBlockY() -> [Integer](#integer) {data-toc-label='getBlockY'}
 
 Returns the y coordinate of the entity.
 
-### getBlockZ(): [Integer](#integer) {data-toc-label='getBlockZ'}
+### getBlockZ() -> [Integer](#integer) {data-toc-label='getBlockZ'}
 
 Returns the z coordinate of the entity.
 
-### getCommandTags(): [List\[String\]](#list) {data-toc-label='getCommandTags'}
+### getTags() -> [List\[String\]](#list) {data-toc-label='getTags'}
 
 Returns the tags on the entity. Similar to `/tag list`.
 
-### getName(): [String](#string) {data-toc-label='getName'}
+### getName() -> [String](#string) {data-toc-label='getName'}
 
 Returns the name of the entity.
 
-### getPassengers(): [List\[Entity\]](#list) {data-toc-label='getPassengers'}
+### getPassengers() -> [List\[Entity\]](#list) {data-toc-label='getPassengers'}
 
 Returns the passengers riding the entity.
 
-### getVehicle(): [Entity](#entity) {data-toc-label='getVehicle'}
+### getVehicle() -> [Entity](#entity) {data-toc-label='getVehicle'}
 
 Returns the vehicle the entity is riding.
 
-### getX(): [Float](#float) {data-toc-label='getX'}
+### getX() -> [Float](#float) {data-toc-label='getX'}
 
 Returns the x coordinate of the entity.
 
-### getY(): [Float](#float) {data-toc-label='getY'}
+### getY() -> [Float](#float) {data-toc-label='getY'}
 
 Returns the y coordinate of the entity.
 
-### getZ(): [Float](#float) {data-toc-label='getZ'}
+### getZ() -> [Float](#float) {data-toc-label='getZ'}
 
 Returns the z coordinate of the entity.
 
-### hasControllingPassenger(): [Boolean](#boolean) {data-toc-label='hasControllingPassenger'}
+### hasControllingPassenger() -> [Boolean](#boolean) {data-toc-label='hasControllingPassenger'}
 
 Returns whether the passenger riding the entity is controlling.
 
-### hasNoGravity(): [Boolean](#boolean) {data-toc-label='hasNoGravity'}
+### hasNoGravity() -> [Boolean](#boolean) {data-toc-label='hasNoGravity'}
 
 Returns whether the entity has no gravity.
 
-### hasPassenger(passenger: [Entity](#entity)): [Boolean](#boolean) {data-toc-label='hasPassenger'}
+### hasPassenger(passenger: [Entity](#entity)) -> [Boolean](#boolean) {data-toc-label='hasPassenger'}
 
 Returns whether `passenger` is riding the entity.
 
-### hasPassengers(): [Boolean](#boolean) {data-toc-label='hasPassengers'}
+### hasPassengers() -> [Boolean](#boolean) {data-toc-label='hasPassengers'}
 
 Returns whether the entity has passengers.
 
-### hasVehicle(): [Boolean](#boolean) {data-toc-label='hasVehicle'}
+### hasVehicle() -> [Boolean](#boolean) {data-toc-label='hasVehicle'}
 
 Returns whether the entity is riding an entity.
 
-### isCrawling(): [Boolean](#boolean) {data-toc-label='isCrawling'}
+### isCrawling() -> [Boolean](#boolean) {data-toc-label='isCrawling'}
 
 Returns whether the entity is crawling.
 
-### isDescending(): [Boolean](#boolean) {data-toc-label='isDescending'}
+### isDescending() -> [Boolean](#boolean) {data-toc-label='isDescending'}
 
 Returns whether the entity is descending.
 
-### isFireImmune(): [Boolean](#boolean) {data-toc-label='isFireImmune'}
+### isFireImmune() -> [Boolean](#boolean) {data-toc-label='isFireImmune'}
 
 Returns whether the entity is fire immune.
 
-### isFrozen(): [Boolean](#boolean) {data-toc-label='isFrozen'}
+### isFrozen() -> [Boolean](#boolean) {data-toc-label='isFrozen'}
 
 Returns whether the entity is frozen.
 
-### isGlowing(): [Boolean](#boolean) {data-toc-label='isGlowing'}
+### isGlowing() -> [Boolean](#boolean) {data-toc-label='isGlowing'}
 
 Returns whether the entity is glowing.
 
-### isInFluid(): [Boolean](#boolean) {data-toc-label='isInFluid'}
+### isInFluid() -> [Boolean](#boolean) {data-toc-label='isInFluid'}
 
 Returns whether the entity is in a fluid.
 
-### isInLava(): [Boolean](#boolean) {data-toc-label='isInLava'}
+### isInLava() -> [Boolean](#boolean) {data-toc-label='isInLava'}
 
 Returns whether the entity is in lava.
 
-### isInsideWall(): [Boolean](#boolean) {data-toc-label='isInsideWall'}
+### isInsideWall() -> [Boolean](#boolean) {data-toc-label='isInsideWall'}
 
 Returns whether the entity is in inside a wall.
 
-### isInvisible(): [Boolean](#boolean) {data-toc-label='isInvisible'}
+### isInvisible() -> [Boolean](#boolean) {data-toc-label='isInvisible'}
 
 Returns whether the entity is invisible.
 
-### isInvulnerable(): [Boolean](#boolean) {data-toc-label='isInvulnerable'}
+### isInvulnerable() -> [Boolean](#boolean) {data-toc-label='isInvulnerable'}
 
 Returns whether the entity is invulnerable.
 
-### isOnFire(): [Boolean](#boolean) {data-toc-label='isOnFire'}
+### isOnFire() -> [Boolean](#boolean) {data-toc-label='isOnFire'}
 
 Returns whether the entity is on fire.
 
-### isOnGround(): [Boolean](#boolean) {data-toc-label='isOnGround'}
+### isOnGround() -> [Boolean](#boolean) {data-toc-label='isOnGround'}
 
 Returns whether the entity is on ground.
 
-### isOnRail(): [Boolean](#boolean) {data-toc-label='isOnRail'}
+### isOnRail() -> [Boolean](#boolean) {data-toc-label='isOnRail'}
 
 Returns whether the entity is on a rail.
 
-### isSilent(): [Boolean](#boolean) {data-toc-label='isSilent'}
+### isSilent() -> [Boolean](#boolean) {data-toc-label='isSilent'}
 
 Returns whether the entity is silent.
 
-### isSneaking(): [Boolean](#boolean) {data-toc-label='isSneaking'}
+### isSneaking() -> [Boolean](#boolean) {data-toc-label='isSneaking'}
 
 Returns whether the entity is sneaking.
 
-### isSprinting(): [Boolean](#boolean) {data-toc-label='isSprinting'}
+### isSprinting() -> [Boolean](#boolean) {data-toc-label='isSprinting'}
 
 Returns whether the entity is sprinting.
 
-### isSwimming(): [Boolean](#boolean) {data-toc-label='isSwimming'}
+### isSwimming() -> [Boolean](#boolean) {data-toc-label='isSwimming'}
 
 Returns whether the entity is swimming.
 
-### isTouchingWater(): [Boolean](#boolean) {data-toc-label='isTouchingWater'}
+### isTouchingWater() -> [Boolean](#boolean) {data-toc-label='isTouchingWater'}
 
 Returns whether the entity is touching water.
 
-### isTouchingWaterOrRain(): [Boolean](#boolean) {data-toc-label='isTouchingWaterOrRain'}
+### isTouchingWaterOrRain() -> [Boolean](#boolean) {data-toc-label='isTouchingWaterOrRain'}
 
 Returns whether the entity is touching water or rain.
 
-### isWet(): [Boolean](#boolean) {data-toc-label='isWet'}
+### isWet() -> [Boolean](#boolean) {data-toc-label='isWet'}
 
 Returns whether the entity is touching water, being rained on, or is inside a bubble column.
 
-### kill(): [Null](#null) {data-toc-label='kill'}
+### kill() -> [Null](#null) {data-toc-label='kill'}
 
 Kills the entity.
 
-### raycast(distance: [Float](#float), target: [Block](#block), check_fluids: [Boolean](#boolean)): [BlockHitResult](#blockhitresult) {data-toc-label='raycast'}
+### raycast(distance: [Float](#float), target: [Block](#block), check_fluids: [Boolean](#boolean)) -> [BlockHitResult](#blockhitresult) {data-toc-label='raycast'}
 
 Raycasts `distance` until it hits `target` and if `check_fluids` is true and it encounters a fluid it will stop.
 
-### removeAllPassengers(): [Null](#null) {data-toc-label='removeAllPassengers'}
+### removePassengers() -> [Null](#null) {data-toc-label='removePassengers'}
 
 Dismounts all passengers riding the entity.
 
-### removeCommandTag(commandTag: [String](#string)): [Null](#null) {data-toc-label='removeCommandTag'}
+### removeTag(tag: [String](#string)) -> [Null](#null) {data-toc-label='removeTag'}
 
 Removes the `commandTag` from the entity. Similar to `/tag remove`
 
-### resetPortalCooldown(): [Null](#null) {data-toc-label='resetPortalCooldown'}
+### resetPortalCooldown() -> [Null](#null) {data-toc-label='resetPortalCooldown'}
 
 Resets the entity's portal cooldown.
 
-### sendMessage(contents: [String](#string)): [Null](#null) {data-toc-label='sendMessage'}
+### sendMessage(contents: [String](#string)) -> [Null](#null) {data-toc-label='sendMessage'}
 
 Sends a message with contents `contents` to the entity.
 
-### setInvisible(invisible: [Boolean](#boolean)): [Null](#null) {data-toc-label='setInvisible'}
+### setInvisible(invisible: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setInvisible'}
 
 Sets the entity to be invisible according to `invisible`.
 
-### setInvulnerable(invulnerable: [Boolean](#boolean)): [Null](#null) {data-toc-label='setInvulnerable'}
+### setInvulnerable(invulnerable: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setInvulnerable'}
 
 Sets the entity to be invulnerable according to `invulnerable`.
 
-### setNoGravity(noGravity: [Boolean](#boolean)): [Null](#null) {data-toc-label='setNoGravity'}
+### setNoGravity(noGravity: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setNoGravity'}
 
 Sets the entity to have no gravity according to `noGravity`.
 
-### setOnFire(onFire: [Boolean](#boolean)): [Null](#null) {data-toc-label='setOnFire'}
+### setOnFire(onFire: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setOnFire'}
 
 Sets the entity to be on fire according to `onFire`.
 
-### setOnGround(onGround: [Boolean](#boolean)): [Null](#null) {data-toc-label='setOnGround'}
+### setOnGround(onGround: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setOnGround'}
 
 Sets the entity to be on the ground according to `onGround`.
 
-### setPortalCooldown(portalCooldown: [Integer](#integer)): [Null](#null) {data-toc-label='setPortalCooldown'}
+### setPortalCooldown(portalCooldown: [Integer](#integer)) -> [Null](#null) {data-toc-label='setPortalCooldown'}
 
 Sets the entity's portal cooldown to `portalCooldown`.
 
-### setPos(x: [Float](#float), y: [Float](#float), z: [Float](#float)): [Null](#null) {data-toc-label='setPos'}
+### setPos(x: [Float](#float), y: [Float](#float), z: [Float](#float)) -> [Null](#null) {data-toc-label='setPos'}
 
 Changes the entity's position according to `x`, `y`, and `z`.
 
-### setSilent(silent: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSilent'}
+### setSilent(silent: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSilent'}
 
 Sets the entity to be silent according to `silent`.
 
-### setSneaking(sneaking: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSneaking'}
+### setSneaking(sneaking: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSneaking'}
 
 Sets the entity to be sneaking according to `sneaking`.
 
-### setSprinting(sprinting: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSprinting'}
+### setSprinting(sprinting: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSprinting'}
 
 Sets the entity to be sprinting according to `sprinting`.
 
-### setSwimming(swimming: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSwimming'}
+### setSwimming(swimming: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSwimming'}
 
 Sets the entity to be swimming according to `swimming`.
 
-### shouldDismountUnderwater(): [Boolean](#boolean) {data-toc-label='shouldDismountUnderwater'}
+### shouldDismountUnderwater() -> [Boolean](#boolean) {data-toc-label='shouldDismountUnderwater'}
 
 Returns whether the entity should dismount underwater.
 
-### stopRiding(): [Boolean](#boolean) {data-toc-label='stopRiding'}
+### stopRiding() -> [Boolean](#boolean) {data-toc-label='stopRiding'}
 
 Makes the entity stop riding its vehicle.
 
-### teleport(x: [Float](#float), y: [Float](#float), z: [Float](#float)): [Null](#null) {data-toc-label='setPos'}
+### teleport(x: [Float](#float), y: [Float](#float), z: [Float](#float)) -> [Null](#null) {data-toc-label='setPos'}
 
 Teleports the entity to `x`, `y`, and `z`.
 
 ## EntityTypes
 
-### get(identifier: [Resource](#resource)): [EntityType](#entitytype) {data-toc-label='get'}
+### get(identifier: [String](#string)) -> [EntityType](#entitytype) {data-toc-label='get'}
 
 Gets the entity type of the `identifier`.
 
@@ -464,7 +468,7 @@ Example:
 var x = 1.5;
 ```
 
-### static parseFloat(float: [String](#string)): [Float](#float) {data-toc-label='static parseFloat'}
+### static parseFloat(float: [String](#string)) -> [Float](#float) {data-toc-label='static parseFloat'}
 
 Converts the string `float` into a float.
 
@@ -485,393 +489,393 @@ Constants:
 
 ## GameRules
 
-### getDoFireTick(): [Boolean](#boolean) {data-toc-label='getDoFireTick'}
+### getDoFireTick() -> [Boolean](#boolean) {data-toc-label='getDoFireTick'}
 
 Returns the value of the doFireTick gamerule.
 
-### getDoMobGriefing(): [Boolean](#boolean) {data-toc-label='getDoMobGriefing'}
+### getDoMobGriefing() -> [Boolean](#boolean) {data-toc-label='getDoMobGriefing'}
 
 Returns the value of the doMobGriefing gamerule.
 
-### getKeepInventory(): [Boolean](#boolean) {data-toc-label='getKeepInventory'}
+### getKeepInventory() -> [Boolean](#boolean) {data-toc-label='getKeepInventory'}
 
 Returns the value of the keepInventory gamerule.
 
-### getDoMobSpawning(): [Boolean](#boolean) {data-toc-label='getDoMobSpawning'}
+### getDoMobSpawning() -> [Boolean](#boolean) {data-toc-label='getDoMobSpawning'}
 
 Returns the value of the doMobSpawning gamerule.
 
-### getDoMobLoot(): [Boolean](#boolean) {data-toc-label='getDoMobLoot'}
+### getDoMobLoot() -> [Boolean](#boolean) {data-toc-label='getDoMobLoot'}
 
 Returns the value of the doMobLoot gamerule.
 
-### getDoTileDrops(): [Boolean](#boolean) {data-toc-label='getDoTileDrops'}
+### getDoTileDrops() -> [Boolean](#boolean) {data-toc-label='getDoTileDrops'}
 
 Returns the value of the doTileDrops gamerule.
 
-### getDoEntityDrops(): [Boolean](#boolean) {data-toc-label='getDoEntityDrops'}
+### getDoEntityDrops() -> [Boolean](#boolean) {data-toc-label='getDoEntityDrops'}
 
 Returns the value of the doEntityDrops gamerule.
 
-### getCommandBlockOutput(): [Boolean](#boolean) {data-toc-label='getCommandBlockOutput'}
+### getCommandBlockOutput() -> [Boolean](#boolean) {data-toc-label='getCommandBlockOutput'}
 
 Returns the value of the commandBlockOutput gamerule.
 
-### getNaturalRegeneration(): [Boolean](#boolean) {data-toc-label='getNaturalRegeneration'}
+### getNaturalRegeneration() -> [Boolean](#boolean) {data-toc-label='getNaturalRegeneration'}
 
 Returns the value of the naturalRegeneration gamerule.
 
-### getDoDaylightCycle(): [Boolean](#boolean) {data-toc-label='getDoDaylightCycle'}
+### getDoDaylightCycle() -> [Boolean](#boolean) {data-toc-label='getDoDaylightCycle'}
 
 Returns the value of the doDaylightCycle gamerule.
 
-### getLogAdminCommands(): [Boolean](#boolean) {data-toc-label='getLogAdminCommands'}
+### getLogAdminCommands() -> [Boolean](#boolean) {data-toc-label='getLogAdminCommands'}
 
 Returns the value of the logAdminCommands gamerule.
 
-### getShowDeathMessages(): [Boolean](#boolean) {data-toc-label='getShowDeathMessages'}
+### getShowDeathMessages() -> [Boolean](#boolean) {data-toc-label='getShowDeathMessages'}
 
 Returns the value of the showDeathMessages gamerule.
 
-### getRandomTickSpeed(): [Integer](#integer) {data-toc-label='getRandomTickSpeed'}
+### getRandomTickSpeed() -> [Integer](#integer) {data-toc-label='getRandomTickSpeed'}
 
 Returns the value of the randomTickSpeed gamerule.
 
-### getSendCommandFeedback(): [Boolean](#boolean) {data-toc-label='getSendCommandFeedback'}
+### getSendCommandFeedback() -> [Boolean](#boolean) {data-toc-label='getSendCommandFeedback'}
 
 Returns the value of the sendCommandFeedback gamerule.
 
-### getReducedDebugInfo(): [Boolean](#boolean) {data-toc-label='getReducedDebugInfo'}
+### getReducedDebugInfo() -> [Boolean](#boolean) {data-toc-label='getReducedDebugInfo'}
 
 Returns the value of the reducedDebugInfo gamerule.
 
-### getSpectatorsGenerateChunks(): [Boolean](#boolean) {data-toc-label='getSpectatorsGenerateChunks'}
+### getSpectatorsGenerateChunks() -> [Boolean](#boolean) {data-toc-label='getSpectatorsGenerateChunks'}
 
 Returns the value of the spectatorsGenerateChunks gamerule.
 
-### getSpawnRadius(): [Integer](#integer) {data-toc-label='getSpawnRadius'}
+### getSpawnRadius() -> [Integer](#integer) {data-toc-label='getSpawnRadius'}
 
 Returns the value of the spawnRadius gamerule.
 
-### getDisableElytraMovementCheck(): [Boolean](#boolean) {data-toc-label='getDisableElytraMovementCheck'}
+### getDisableElytraMovementCheck() -> [Boolean](#boolean) {data-toc-label='getDisableElytraMovementCheck'}
 
 Returns the value of the disableElytraMovementCheck gamerule.
 
-### getMaxEntityCramming(): [Integer](#integer) {data-toc-label='getMaxEntityCramming'}
+### getMaxEntityCramming() -> [Integer](#integer) {data-toc-label='getMaxEntityCramming'}
 
 Returns the value of the maxEntityCramming gamerule.
 
-### getDoWeatherCycle(): [Boolean](#boolean) {data-toc-label='getDoWeatherCycle'}
+### getDoWeatherCycle() -> [Boolean](#boolean) {data-toc-label='getDoWeatherCycle'}
 
 Returns the value of the doWeatherCycle gamerule.
 
-### getDoLimitedCrafting(): [Boolean](#boolean) {data-toc-label='getDoLimitedCrafting'}
+### getDoLimitedCrafting() -> [Boolean](#boolean) {data-toc-label='getDoLimitedCrafting'}
 
 Returns the value of the doLimitedCrafting gamerule.
 
-### getMaxCommandChainLength(): [Integer](#integer) {data-toc-label='getMaxCommandChainLength'}
+### getMaxCommandChainLength() -> [Integer](#integer) {data-toc-label='getMaxCommandChainLength'}
 
 Returns the value of the maxCommandChainLength gamerule.
 
-### getCommandModificationBlockLimit(): [Integer](#integer) {data-toc-label='getCommandModificationBlockLimit'}
+### getCommandModificationBlockLimit() -> [Integer](#integer) {data-toc-label='getCommandModificationBlockLimit'}
 
 Returns the value of the commandModificationBlockLimit gamerule.
 
-### getAnnounceAdvancements(): [Boolean](#boolean) {data-toc-label='getAnnounceAdvancements'}
+### getAnnounceAdvancements() -> [Boolean](#boolean) {data-toc-label='getAnnounceAdvancements'}
 
 Returns the value of the announceAdvancements gamerule.
 
-### getDisableRaids(): [Boolean](#boolean) {data-toc-label='getDisableRaids'}
+### getDisableRaids() -> [Boolean](#boolean) {data-toc-label='getDisableRaids'}
 
 Returns the value of the disableRaids gamerule.
 
-### getDoInsomnia(): [Boolean](#boolean) {data-toc-label='getDoInsomnia'}
+### getDoInsomnia() -> [Boolean](#boolean) {data-toc-label='getDoInsomnia'}
 
 Returns the value of the doInsomnia gamerule.
 
-### getDoImmediateRespawn(): [Boolean](#boolean) {data-toc-label='getDoImmediateRespawn'}
+### getDoImmediateRespawn() -> [Boolean](#boolean) {data-toc-label='getDoImmediateRespawn'}
 
 Returns the value of the doImmediateRespawn gamerule.
 
-### getDrowningDamage(): [Boolean](#boolean) {data-toc-label='getDrowningDamage'}
+### getDrowningDamage() -> [Boolean](#boolean) {data-toc-label='getDrowningDamage'}
 
 Returns the value of the drowningDamage gamerule.
 
-### getFallDamage(): [Boolean](#boolean) {data-toc-label='getFallDamage'}
+### getFallDamage() -> [Boolean](#boolean) {data-toc-label='getFallDamage'}
 
 Returns the value of the fallDamage gamerule.
 
-### getFireDamage(): [Boolean](#boolean) {data-toc-label='getFireDamage'}
+### getFireDamage() -> [Boolean](#boolean) {data-toc-label='getFireDamage'}
 
 Returns the value of the fireDamage gamerule.
 
-### getFreezeDamage(): [Boolean](#boolean) {data-toc-label='getFreezeDamage'}
+### getFreezeDamage() -> [Boolean](#boolean) {data-toc-label='getFreezeDamage'}
 
 Returns the value of the freezeDamage gamerule.
 
-### getDoPatrolSpawning(): [Boolean](#boolean) {data-toc-label='getDoPatrolSpawning'}
+### getDoPatrolSpawning() -> [Boolean](#boolean) {data-toc-label='getDoPatrolSpawning'}
 
 Returns the value of the doPatrolSpawning gamerule.
 
-### getDoTraderSpawning(): [Boolean](#boolean) {data-toc-label='getDoTraderSpawning'}
+### getDoTraderSpawning() -> [Boolean](#boolean) {data-toc-label='getDoTraderSpawning'}
 
 Returns the value of the doTraderSpawning gamerule.
 
-### getDoWardenSpawning(): [Boolean](#boolean) {data-toc-label='getDoWardenSpawning'}
+### getDoWardenSpawning() -> [Boolean](#boolean) {data-toc-label='getDoWardenSpawning'}
 
 Returns the value of the doWardenSpawning gamerule.
 
-### getForgiveDeadPlayers(): [Boolean](#boolean) {data-toc-label='getForgiveDeadPlayers'}
+### getForgiveDeadPlayers() -> [Boolean](#boolean) {data-toc-label='getForgiveDeadPlayers'}
 
 Returns the value of the forgiveDeadPlayers gamerule.
 
-### getUniversalAnger(): [Boolean](#boolean) {data-toc-label='getUniversalAnger'}
+### getUniversalAnger() -> [Boolean](#boolean) {data-toc-label='getUniversalAnger'}
 
 Returns the value of the universalAnger gamerule.
 
-### getPlayersSleepingPercentage(): [Boolean](#boolean) {data-toc-label='getPlayersSleepingPercentage'}
+### getPlayersSleepingPercentage() -> [Boolean](#boolean) {data-toc-label='getPlayersSleepingPercentage'}
 
 Returns the value of the playersSleepingPercentage gamerule.
 
-### getBlockExplosionDropDecay(): [Boolean](#boolean) {data-toc-label='getBlockExplosionDropDecay'}
+### getBlockExplosionDropDecay() -> [Boolean](#boolean) {data-toc-label='getBlockExplosionDropDecay'}
 
 Returns the value of the blockExplosionDropDecay gamerule.
 
-### getMobExplosionDropDecay(): [Boolean](#boolean) {data-toc-label='getMobExplosionDropDecay'}
+### getMobExplosionDropDecay() -> [Boolean](#boolean) {data-toc-label='getMobExplosionDropDecay'}
 
 Returns the value of the mobExplosionDropDecay gamerule.
 
-### getTntExplosionDropDecay(): [Boolean](#boolean) {data-toc-label='getTntExplosionDropDecay'}
+### getTntExplosionDropDecay() -> [Boolean](#boolean) {data-toc-label='getTntExplosionDropDecay'}
 
 Returns the value of the tntExplosionDropDecay gamerule.
 
-### getSnowAccumulationHeight(): [Boolean](#boolean) {data-toc-label='getSnowAccumulationHeight'}
+### getSnowAccumulationHeight() -> [Boolean](#boolean) {data-toc-label='getSnowAccumulationHeight'}
 
 Returns the value of the snowAccumulationHeight gamerule.
 
-### getWaterSourceConversion(): [Boolean](#boolean) {data-toc-label='getWaterSourceConversion'}
+### getWaterSourceConversion() -> [Boolean](#boolean) {data-toc-label='getWaterSourceConversion'}
 
 Returns the value of the waterSourceConversion gamerule.
 
-### getLavaSourceConversion(): [Boolean](#boolean) {data-toc-label='getLavaSourceConversion'}
+### getLavaSourceConversion() -> [Boolean](#boolean) {data-toc-label='getLavaSourceConversion'}
 
 Returns the value of the lavaSourceConversion gamerule.
 
-### getGlobalSoundEvents(): [Boolean](#boolean) {data-toc-label='getGlobalSoundEvents'}
+### getGlobalSoundEvents() -> [Boolean](#boolean) {data-toc-label='getGlobalSoundEvents'}
 
 Returns the value of the globalSoundEvents gamerule.
 
-### getDoVinesSpread(): [Boolean](#boolean) {data-toc-label='getDoVinesSpread'}
+### getDoVinesSpread() -> [Boolean](#boolean) {data-toc-label='getDoVinesSpread'}
 
 Returns the value of the doVinesSpread gamerule.
 
-### getEnderPearlsVanishOnDeath(): [Boolean](#boolean) {data-toc-label='getEnderPearlsVanishOnDeath'}
+### getEnderPearlsVanishOnDeath() -> [Boolean](#boolean) {data-toc-label='getEnderPearlsVanishOnDeath'}
 
 Returns the value of the enderPearlsVanishOnDeath gamerule.
 
-### getMaxArgumentCount(): [Integer](#integer) {data-toc-label='getMaxArgumentCount'}
+### getMaxArgumentCount() -> [Integer](#integer) {data-toc-label='getMaxArgumentCount'}
 
 A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
 Returns the value of the maxArgumentCount gamerule.
 
-### getMaxLoops(): [Integer](#integer) {data-toc-label='getMaxLoops'}
+### getMaxLoops() -> [Integer](#integer) {data-toc-label='getMaxLoops'}
 
 A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
 Returns the value of the maxLoops gamerule.
 
-### setDoFireTick(doFireTick: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoFireTick'}
+### setDoFireTick(doFireTick: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoFireTick'}
 
 Sets the value of the doFireTick gamerule.
 
-### setDoMobGriefing(doMobGriefing: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoMobGriefing'}
+### setDoMobGriefing(doMobGriefing: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoMobGriefing'}
 
 Sets the value of the doMobGriefing gamerule.
 
-### setKeepInventory(keepInventory: [Boolean](#boolean)): [Null](#null) {data-toc-label='setKeepInventory'}
+### setKeepInventory(keepInventory: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setKeepInventory'}
 
 Sets the value of the keepInventory gamerule.
 
-### setDoMobSpawning(doMobSpawning: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoMobSpawning'}
+### setDoMobSpawning(doMobSpawning: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoMobSpawning'}
 
 Sets the value of the doMobSpawning gamerule.
 
-### setDoMobLoot(doMobLoot: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoMobLoot'}
+### setDoMobLoot(doMobLoot: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoMobLoot'}
 
 Sets the value of the doMobLoot gamerule.
 
-### setDoTileDrops(doTileDrops: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoTileDrops'}
+### setDoTileDrops(doTileDrops: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoTileDrops'}
 
 Sets the value of the doTileDrops gamerule.
 
-### setDoEntityDrops(doEntityDrops: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoEntityDrops'}
+### setDoEntityDrops(doEntityDrops: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoEntityDrops'}
 
 Sets the value of the doEntityDrops gamerule.
 
-### setCommandBlockOutput(commandBlockOutput: [Boolean](#boolean)): [Null](#null) {data-toc-label='setCommandBlockOutput'}
+### setCommandBlockOutput(commandBlockOutput: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setCommandBlockOutput'}
 
 Sets the value of the commandBlockOutput gamerule.
 
-### setNaturalRegeneration(naturalRegeneration: [Boolean](#boolean)): [Null](#null) {data-toc-label='setNaturalRegeneration'}
+### setNaturalRegeneration(naturalRegeneration: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setNaturalRegeneration'}
 
 Sets the value of the naturalRegeneration gamerule.
 
-### setDoDaylightCycle(doDaylightCycle: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoDaylightCycle'}
+### setDoDaylightCycle(doDaylightCycle: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoDaylightCycle'}
 
 Sets the value of the doDaylightCycle gamerule.
 
-### setLogAdminCommands(logAdminCommands: [Boolean](#boolean)): [Null](#null) {data-toc-label='setLogAdminCommands'}
+### setLogAdminCommands(logAdminCommands: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setLogAdminCommands'}
 
 Sets the value of the logAdminCommands gamerule.
 
-### setShowDeathMessages(showDeathMessages: [Boolean](#boolean)): [Null](#null) {data-toc-label='setShowDeathMessages'}
+### setShowDeathMessages(showDeathMessages: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setShowDeathMessages'}
 
 Sets the value of the showDeathMessages gamerule.
 
-### setRandomTickSpeed(randomTickSpeed: [Integer](#integer)): [Null](#null) {data-toc-label='setRandomTickSpeed'}
+### setRandomTickSpeed(randomTickSpeed: [Integer](#integer)) -> [Null](#null) {data-toc-label='setRandomTickSpeed'}
 
 Sets the value of the randomTickSpeed gamerule.
 
-### setSendCommandFeedback(sendCommandFeedback: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSendCommandFeedback'}
+### setSendCommandFeedback(sendCommandFeedback: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSendCommandFeedback'}
 
 Sets the value of the sendCommandFeedback gamerule.
 
-### setReducedDebugInfo(reducedDebugInfo: [Boolean](#boolean)): [Null](#null) {data-toc-label='setReducedDebugInfo'}
+### setReducedDebugInfo(reducedDebugInfo: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setReducedDebugInfo'}
 
 Sets the value of the reducedDebugInfo gamerule.
 
-### setSpectatorsGenerateChunks(spectatorsGenerateChunks: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSpectatorsGenerateChunks'}
+### setSpectatorsGenerateChunks(spectatorsGenerateChunks: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSpectatorsGenerateChunks'}
 
 Sets the value of the spectatorsGenerateChunks gamerule.
 
-### setSpawnRadius(spawnRadius: [Integer](#integer)): [Null](#null) {data-toc-label='setSpawnRadius'}
+### setSpawnRadius(spawnRadius: [Integer](#integer)) -> [Null](#null) {data-toc-label='setSpawnRadius'}
 
 Sets the value of the spawnRadius gamerule.
 
-### setDisableElytraMovementCheck(disableElytraMovementCheck: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDisableElytraMovementCheck'}
+### setDisableElytraMovementCheck(disableElytraMovementCheck: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDisableElytraMovementCheck'}
 
 Sets the value of the disableElytraMovementCheck gamerule.
 
-### setMaxEntityCramming(maxEntityCramming: [Integer](#integer)): [Null](#null) {data-toc-label='setMaxEntityCramming'}
+### setMaxEntityCramming(maxEntityCramming: [Integer](#integer)) -> [Null](#null) {data-toc-label='setMaxEntityCramming'}
 
 Sets the value of the maxEntityCramming gamerule.
 
-### setDoWeatherCycle(doWeatherCycle: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoWeatherCycle'}
+### setDoWeatherCycle(doWeatherCycle: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoWeatherCycle'}
 
 Sets the value of the doWeatherCycle gamerule.
 
-### setDoLimitedCrafting(doLimitedCrafting: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoLimitedCrafting'}
+### setDoLimitedCrafting(doLimitedCrafting: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoLimitedCrafting'}
 
 Sets the value of the doLimitedCrafting gamerule.
 
-### setMaxCommandChainLength(maxCommandChainLength: [Integer](#integer)): [Null](#null) {data-toc-label='setMaxCommandChainLength'}
+### setMaxCommandChainLength(maxCommandChainLength: [Integer](#integer)) -> [Null](#null) {data-toc-label='setMaxCommandChainLength'}
 
 Sets the value of the maxCommandChainLength gamerule.
 
-### setCommandModificationBlockLimit(commandModificationBlockLimit: [Integer](#integer)): [Null](#null) {data-toc-label='setCommandModificationBlockLimit'}
+### setCommandModificationBlockLimit(commandModificationBlockLimit: [Integer](#integer)) -> [Null](#null) {data-toc-label='setCommandModificationBlockLimit'}
 
 Sets the value of the commandModificationBlockLimit gamerule.
 
-### setAnnounceAdvancements(announceAdvancements: [Boolean](#boolean)): [Null](#null) {data-toc-label='setAnnounceAdvancements'}
+### setAnnounceAdvancements(announceAdvancements: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setAnnounceAdvancements'}
 
 Sets the value of the announceAdvancements gamerule.
 
-### setDisableRaids(disableRaids: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDisableRaids'}
+### setDisableRaids(disableRaids: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDisableRaids'}
 
 Sets the value of the disableRaids gamerule.
 
-### setDoInsomnia(doInsomnia: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoInsomnia'}
+### setDoInsomnia(doInsomnia: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoInsomnia'}
 
 Sets the value of the doInsomnia gamerule.
 
-### setDoImmediateRespawn(doImmediateRespawn: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoImmediateRespawn'}
+### setDoImmediateRespawn(doImmediateRespawn: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoImmediateRespawn'}
 
 Sets the value of the doImmediateRespawn gamerule.
 
-### setDrowningDamage(drowningDamage: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDrowningDamage'}
+### setDrowningDamage(drowningDamage: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDrowningDamage'}
 
 Sets the value of the drowningDamage gamerule.
 
-### setFallDamage(fallDamage: [Boolean](#boolean)): [Null](#null) {data-toc-label='setFallDamage'}
+### setFallDamage(fallDamage: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setFallDamage'}
 
 Sets the value of the fallDamage gamerule.
 
-### setFireDamage(fireDamage: [Boolean](#boolean)): [Null](#null) {data-toc-label='setFireDamage'}
+### setFireDamage(fireDamage: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setFireDamage'}
 
 Sets the value of the fireDamage gamerule.
 
-### setFreezeDamage(freezeDamage: [Boolean](#boolean)): [Null](#null) {data-toc-label='setFreezeDamage'}
+### setFreezeDamage(freezeDamage: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setFreezeDamage'}
 
 Sets the value of the freezeDamage gamerule.
 
-### setDoPatrolSpawning(doPatrolSpawning: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoPatrolSpawning'}
+### setDoPatrolSpawning(doPatrolSpawning: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoPatrolSpawning'}
 
 Sets the value of the doPatrolSpawning gamerule.
 
-### setDoTraderSpawning(doTraderSpawning: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoTraderSpawning'}
+### setDoTraderSpawning(doTraderSpawning: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoTraderSpawning'}
 
 Sets the value of the doTraderSpawning gamerule.
 
-### setDoWardenSpawning(doWardenSpawning: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoWardenSpawning'}
+### setDoWardenSpawning(doWardenSpawning: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoWardenSpawning'}
 
 Sets the value of the doWardenSpawning gamerule.
 
-### setForgiveDeadPlayers(forgiveDeadPlayers: [Boolean](#boolean)): [Null](#null) {data-toc-label='setForgiveDeadPlayers'}
+### setForgiveDeadPlayers(forgiveDeadPlayers: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setForgiveDeadPlayers'}
 
 Sets the value of the forgiveDeadPlayers gamerule.
 
-### setUniversalAnger(universalAnger: [Boolean](#boolean)): [Null](#null) {data-toc-label='setUniversalAnger'}
+### setUniversalAnger(universalAnger: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setUniversalAnger'}
 
 Sets the value of the universalAnger gamerule.
 
-### setPlayersSleepingPercentage(playersSleepingPercentage: [Boolean](#boolean)): [Null](#null) {data-toc-label='setPlayersSleepingPercentage'}
+### setPlayersSleepingPercentage(playersSleepingPercentage: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setPlayersSleepingPercentage'}
 
 Sets the value of the playersSleepingPercentage gamerule.
 
-### setBlockExplosionDropDecay(blockExplosionDropDecay: [Boolean](#boolean)): [Null](#null) {data-toc-label='setBlockExplosionDropDecay'}
+### setBlockExplosionDropDecay(blockExplosionDropDecay: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setBlockExplosionDropDecay'}
 
 Sets the value of the blockExplosionDropDecay gamerule.
 
-### setMobExplosionDropDecay(mobExplosionDropDecay: [Boolean](#boolean)): [Null](#null) {data-toc-label='setMobExplosionDropDecay'}
+### setMobExplosionDropDecay(mobExplosionDropDecay: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setMobExplosionDropDecay'}
 
 Sets the value of the mobExplosionDropDecay gamerule.
 
-### setTntExplosionDropDecay(tntExplosionDropDecay: [Boolean](#boolean)): [Null](#null) {data-toc-label='setTntExplosionDropDecay'}
+### setTntExplosionDropDecay(tntExplosionDropDecay: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setTntExplosionDropDecay'}
 
 Sets the value of the tntExplosionDropDecay gamerule.
 
-### setSnowAccumulationHeight(snowAccumulationHeight: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSnowAccumulationHeight'}
+### setSnowAccumulationHeight(snowAccumulationHeight: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSnowAccumulationHeight'}
 
 Sets the value of the snowAccumulationHeight gamerule.
 
-### setWaterSourceConversion(waterSourceConversion: [Boolean](#boolean)): [Null](#null) {data-toc-label='setWaterSourceConversion'}
+### setWaterSourceConversion(waterSourceConversion: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setWaterSourceConversion'}
 
 Sets the value of the waterSourceConversion gamerule.
 
-### setLavaSourceConversion(lavaSourceConversion: [Boolean](#boolean)): [Null](#null) {data-toc-label='setLavaSourceConversion'}
+### setLavaSourceConversion(lavaSourceConversion: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setLavaSourceConversion'}
 
 Sets the value of the lavaSourceConversion gamerule.
 
-### setGlobalSoundEvents(globalSoundEvents: [Boolean](#boolean)): [Null](#null) {data-toc-label='setGlobalSoundEvents'}
+### setGlobalSoundEvents(globalSoundEvents: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setGlobalSoundEvents'}
 
 Sets the value of the globalSoundEvents gamerule.
 
-### setDoVinesSpread(doVinesSpread: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDoVinesSpread'}
+### setDoVinesSpread(doVinesSpread: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDoVinesSpread'}
 
 Sets the value of the doVinesSpread gamerule.
 
-### setEnderPearlsVanishOnDeath(enderPearlsVanishOnDeath: [Boolean](#boolean)): [Null](#null) {data-toc-label='setEnderPearlsVanishOnDeath'}
+### setEnderPearlsVanishOnDeath(enderPearlsVanishOnDeath: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setEnderPearlsVanishOnDeath'}
 
 Sets the value of the enderPearlsVanishOnDeath gamerule.
 
-### setMaxArgumentCount(maxArgumentCount: [Integer](#integer)): [Null](#null) {data-toc-label='setMaxArgumentCount'}
+### setMaxArgumentCount(maxArgumentCount: [Integer](#integer)) -> [Null](#null) {data-toc-label='setMaxArgumentCount'}
 
 A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
 Sets the value of the maxArgumentCount gamerule.
 
-### setMaxLoops(maxLoops: [Integer](#integer)): [Null](#null) {data-toc-label='setMaxLoops'}
+### setMaxLoops(maxLoops: [Integer](#integer)) -> [Null](#null) {data-toc-label='setMaxLoops'}
 
 A custom gamerule created by Sculk. See [Added Gamerules](added_gamerules.md) for more information.
 
@@ -886,7 +890,7 @@ Example:
 var x = 1;
 ```
 
-### static parseInteger(integer: [String](#string)): [Integer](#integer) {data-toc-label='static parseInteger'}
+### static parseInteger(integer: [String](#string)) -> [Integer](#integer) {data-toc-label='static parseInteger'}
 
 Converts the string `integer` into an integer.
 
@@ -894,95 +898,99 @@ Converts the string `integer` into an integer.
 
 Represents a stack of items.
 
-### init(item: [Item](#item), count: [Integer](#integer)): [ItemStack](#itemstack) {data-toc-label='init'}
+### item: [Item](#item) {data-toc-label='item'}
+
+The item in the stack.
+
+### init(item: [Item](#item), count: [Integer](#integer)) -> [ItemStack](#itemstack) {data-toc-label='init'}
 
 Initializes ItemStack.
 
-### decrement(amount: [Integer](#integer)): [Null](#null) {data-toc-label='decrement'}
+### decrement(amount: [Integer](#integer)) -> [Null](#null) {data-toc-label='decrement'}
 
 Decrements the amount of items in the stack by `amount`.
 
-### getCount(): [Integer](#integer) {data-toc-label='getCount'}
+### getCount() -> [Integer](#integer) {data-toc-label='getCount'}
 
 Returns the amount of items in the stack.
 
-### getDamage(): [Integer](#integer) {data-toc-label='getDamage'}
+### getDamage() -> [Integer](#integer) {data-toc-label='getDamage'}
 
 Returns how the damage (lost durability) of the item stack.
 
 Does **NOT** return how much damage the item does!
 
-### getHolder(): [Entity](#entity) {data-toc-label='getHolder'}
+### getHolder() -> [Entity](#entity) {data-toc-label='getHolder'}
 
 Returns the entity who is holding the item.
 
-### getItem(): [Item](#item) {data-toc-label='getItem'}
+### getItem() -> [Item](#item) {data-toc-label='getItem'}
 
 Returns the item in the stack.
 
-### getMaxCount(): [Integer](#integer) {data-toc-label='getMaxCount'}
+### getMaxCount() -> [Integer](#integer) {data-toc-label='getMaxCount'}
 
 Returns the max amount of items that can be in 1 stack.
 
-### getMaxDamage(): [Integer](#integer) {data-toc-label='getMaxDamage'}
+### getMaxDamage() -> [Integer](#integer) {data-toc-label='getMaxDamage'}
 
 Returns the durability of the item.
 
-### getName(): [String](#string) {data-toc-label='getName'}
+### getName() -> [String](#string) {data-toc-label='getName'}
 
 Returns the name of the item.
 
-### getRepairCost(): [Integer](#integer) {data-toc-label='getRepairCost'}
+### getRepairCost() -> [Integer](#integer) {data-toc-label='getRepairCost'}
 
 Returns the repair cost of the item.
 
-### hasEnchantments(): [Boolean](#boolean) {data-toc-label='hasEnchantments'}
+### hasEnchantments() -> [Boolean](#boolean) {data-toc-label='hasEnchantments'}
 
 Returns whether the item has enchantments.
 
-### increment(amount: [Integer](#integer)): [Null](#null) {data-toc-label='increment'}
+### increment(amount: [Integer](#integer)) -> [Null](#null) {data-toc-label='increment'}
 
 Increments the amount of items in the stack by `amount`.
 
-### isDamageable(): [Boolean](#boolean) {data-toc-label='isDamageable'}
+### isDamageable() -> [Boolean](#boolean) {data-toc-label='isDamageable'}
 
 Returns whether the item is damageable.
 
-### isDamaged(): [Boolean](#boolean) {data-toc-label='isDamaged'}
+### isDamaged() -> [Boolean](#boolean) {data-toc-label='isDamaged'}
 
 Returns whether the item is damaged.
 
-### isEnchantable(): [Boolean](#boolean) {data-toc-label='isEnchantable'}
+### isEnchantable() -> [Boolean](#boolean) {data-toc-label='isEnchantable'}
 
 Returns whether the item is enchantable.
 
-### isFood(): [Boolean](#boolean) {data-toc-label='isFood'}
+### isFood() -> [Boolean](#boolean) {data-toc-label='isFood'}
 
 Returns whether the item is food.
 
-### isInFrame(): [Boolean](#boolean) {data-toc-label='isInFrame'}
+### isInFrame() -> [Boolean](#boolean) {data-toc-label='isInFrame'}
 
 Returns whether the item is in a frame.
 
-### isStackable(): [Boolean](#boolean) {data-toc-label='isStackable'}
+### isStackable() -> [Boolean](#boolean) {data-toc-label='isStackable'}
 
 Returns whether the item is stackable.
 
-### setCount(amount: [Integer](#integer)): [Null](#null) {data-toc-label='setCount'}
+### setCount(amount: [Integer](#integer)) -> [Null](#null) {data-toc-label='setCount'}
 
 Sets the amount of items in the stack to `amount`.
 
-### setDamage(damage: [Integer](#integer)): [Null](#null) {data-toc-label='setDamage'}
+### setDamage(damage: [Integer](#integer)) -> [Null](#null) {data-toc-label='setDamage'}
 
 Sets the damage (lost durability) of the item.
 
-### setRepairCost(repair_cost: [Integer](#integer)): [Null](#null) {data-toc-label='setRepairCost'}
+### setRepairCost(repair_cost: [Integer](#integer)) -> [Null](#null) {data-toc-label='setRepairCost'}
 
 Sets the repair cost of the item.
 
 ## Items
 
-### get(itemID: [Resource](#resource)): [Item](#item) {data-toc-label='get'}
+### get(itemID: [String](#string)) -> [Item](#item) {data-toc-label='get'}
 
 Gets the item from the given ID.
 
@@ -990,31 +998,31 @@ Gets the item from the given ID.
 
 Represents an item.
 
-### getMaxCount(): [Integer](#integer) {data-toc-label='getMaxCount'}
+### getMaxCount() -> [Integer](#integer) {data-toc-label='getMaxCount'}
 
 Returns the max amount of items that can be in a stack.
 
-### register(item: Item): [Item](#item) {data-toc-label='register'}
+### register(item: Item) -> [Item](#item) {data-toc-label='register'}
 
 Registers `item`. See [Registering Items](custom_content.md#items) for more details.
 
-### getMaxDamage(): [Integer](#integer) {data-toc-label='getMaxDamage'}
+### getMaxDamage() -> [Integer](#integer) {data-toc-label='getMaxDamage'}
 
 Returns the durability of the item.
 
-### getName(): [String](#string) {data-toc-label='getName'}
+### getName() -> [String](#string) {data-toc-label='getName'}
 
 Returns the name of the item.
 
-### isDamageable(): [Boolean](#boolean) {data-toc-label='isDamageable'}
+### isDamageable() -> [Boolean](#boolean) {data-toc-label='isDamageable'}
 
 Returns whether the item is damageable.
 
-### isFireproof(): [Boolean](#boolean) {data-toc-label='isFireproof'}
+### isFireproof() -> [Boolean](#boolean) {data-toc-label='isFireproof'}
 
 Returns whether the item is fireproof.
 
-### isFood(): [Boolean](#boolean) {data-toc-label='isFood'}
+### isFood() -> [Boolean](#boolean) {data-toc-label='isFood'}
 
 Returns whether the item is food.
 
@@ -1028,15 +1036,15 @@ var list = [1, 2, 3];
 print(list[0]); // 1
 ```
 
-### append(object: [Object](#object)): [Null](#null) {data-toc-label='append'}
+### append(object: [Object](#object)) -> [Null](#null) {data-toc-label='append'}
 
 Appends `object` to the list.
 
-### toString(): [String](#string) {data-toc-label='toString'}
+### toString() -> [String](#string) {data-toc-label='toString'}
 
 Returns the list in string form.
 
-### contains(object: [Object](#object)): [Boolean](#boolean) {data-toc-label='contains'}
+### contains(object: [Object](#object)) -> [Boolean](#boolean) {data-toc-label='contains'}
 
 Returns whether `object` is in the list.
 
@@ -1044,11 +1052,11 @@ Returns whether `object` is in the list.
 
 Represents a living entity.
 
-### tiltScreen(x: [Float](#float), z: [Float](#float)): [Null](#null) {data-toc-label='tiltScreen'}
+### tiltScreen(x: [Float](#float), z: [Float](#float)) -> [Null](#null) {data-toc-label='tiltScreen'}
 
 Tilts the screen of the entity.
 
-### wakeUp(): [Null](#null) {data-toc-label='wakeUp'}
+### wakeUp() -> [Null](#null) {data-toc-label='wakeUp'}
 
 Wakes the entity up.
 
@@ -1060,57 +1068,61 @@ Represents a method on a class.
 
 Represents the Minecraft Server.
 
-### runCommand(command: [String](#string)): [CommandResult](#commandresult) {data-toc-label='runCommand'}
+### runCommand(command: [String](#string)) -> [CommandResult](#commandresult) {data-toc-label='runCommand'}
 
 Runs the command `command`.
 
-### setPVPEnabled(pvp_enabled: [Boolean](#boolean)): [Null](#null) {data-toc-label='setPVPEnabled'}
+### setPVPEnabled(pvp_enabled: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setPVPEnabled'}
 
 Sets pvp to be enabled according to `pvp_enabled`.
 
-### setDifficultyLocked(difficulty_locked: [Boolean](#boolean)): [Null](#null) {data-toc-label='setDifficultyLocked'}
+### setDifficultyLocked(difficulty_locked: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setDifficultyLocked'}
 
 Sets the difficulty to be locked according to `difficulty_locked`.
 
-### isPVPEnabled(): [Boolean](#boolean) {data-toc-label='isPVPEnabled'}
+### isPVPEnabled() -> [Boolean](#boolean) {data-toc-label='isPVPEnabled'}
 
 Returns whether pvp is enabled.
 
-### isNetherEnabled(): [Boolean](#boolean) {data-toc-label='isNetherEnabled'}
+### isNetherEnabled() -> [Boolean](#boolean) {data-toc-label='isNetherEnabled'}
 
 Returns whether the nether is enabled.
 
-### isFlightEnabled(): [Boolean](#boolean) {data-toc-label='isFlightEnabled'}
+### isFlightEnabled() -> [Boolean](#boolean) {data-toc-label='isFlightEnabled'}
 
 Returns whether flight is enabled.
 
-### getServerPort(): [Integer](#integer) {data-toc-label='getServerPort'}
+### getServerPort() -> [Integer](#integer) {data-toc-label='getServerPort'}
 
 Returns the port of the server.
 
-### getServerIP(): [String](#string) {data-toc-label='getServerIP'}
+### getServerIP() -> [String](#string) {data-toc-label='getServerIP'}
 
 Returns the IP of the server.
 
-### isHardcore(): [Boolean](#boolean) {data-toc-label='isHardcore'}
+### isHardcore() -> [Boolean](#boolean) {data-toc-label='isHardcore'}
 
 Returns whether the server is hardcore.
 
-### areCommandBlocksEnabled(): [Boolean](#boolean) {data-toc-label='areCommandBlocksEnabled'}
+### areCommandBlocksEnabled() -> [Boolean](#boolean) {data-toc-label='areCommandBlocksEnabled'}
 
 Returns whether command blocks are enabled.
 
-### setDifficulty(difficulty: [Difficulty](#difficulties)): [Null](#null) {data-toc-label='setDifficulty'}
+### setDifficulty(difficulty: [Difficulty](#difficulties)) -> [Null](#null) {data-toc-label='setDifficulty'}
 
 Sets the difficulty to `difficuly`.
 
-### isModInstalled(modID: [Resource](#resource)): [Boolean](#boolean) {data-toc-label='isModInstalled'}
+### isModInstalled(modID: [String](#string)) -> [Boolean](#boolean) {data-toc-label='isModInstalled'}
 
 Returns whether `modID` is installed.
 
 ## Null
 
 Represents `null`.
+
+## Number
+
+Represents a number, like [Float](#float) and [Integer](#integer).
 
 ## Object
 
@@ -1120,130 +1132,121 @@ The base class of every class.
 
 Represents the player.
 
-### addExperiencePoints(experience_points: [Integer](#integer)): [Null](#null) {data-toc-label='addExperiencePoints'}
+### addExperiencePoints(experience_points: [Integer](#integer)) -> [Null](#null) {data-toc-label='addExperiencePoints'}
 
 Adds `experience_points` amount of XP points to the player.
 
-### getEnderChestInventory(): [Inventory](#inventory) {data-toc-label='getEnderChestInventory'}
+### getEnderChestInventory() -> [Inventory](#inventory) {data-toc-label='getEnderChestInventory'}
 
 Returns the players ender chest inventory.
 
-### setEnderChestInventory(inventory: [Inventory](#inventory)): [Null](#null) {data-toc-label='setEnderChestInventory'}
+### setEnderChestInventory(inventory: [Inventory](#inventory)) -> [Null](#null) {data-toc-label='setEnderChestInventory'}
 
 Sets the players ender chest inventory.
 
-### getInventory(): [Inventory](#inventory) {data-toc-label='getInventory'}
+### getInventory() -> [Inventory](#inventory) {data-toc-label='getInventory'}
 
 Returns the players inventory.
 
-### setInventory(inventory: [Inventory](#inventory)): [Null](#null) {data-toc-label='setInventory'}
+### setInventory(inventory: [Inventory](#inventory)) -> [Null](#null) {data-toc-label='setInventory'}
 
 Sets the players inventory.
 
-### getStackInMainHand(): [ItemStack](#itemstack) {data-toc-label='getStackInMainHand'}
+### getStackInMainHand() -> [ItemStack](#itemstack) {data-toc-label='getStackInMainHand'}
 
 Returns the item stack in the players main hand.
 
-### getStackInOffHand(): [ItemStack](#itemstack) {data-toc-label='getStackInOffHand'}
+### getStackInOffHand() -> [ItemStack](#itemstack) {data-toc-label='getStackInOffHand'}
 
 Returns the item stack in the players offhand.
 
-### addExperienceLevels(experience_levels: [Integer](#integer)): [Null](#null) {data-toc-label='addExperienceLevels'}
+### addExperienceLevels(experience_levels: [Integer](#integer)) -> [Null](#null) {data-toc-label='addExperienceLevels'}
 
 Adds `experience_levels` amount of XP levels to the player.
 
-### isCreative(): [Boolean](#boolean) {data-toc-label='isCreative'}
+### isCreative() -> [Boolean](#boolean) {data-toc-label='isCreative'}
 
 Returns whether the player is in creative mode.
 
-### isSpectator(): [Boolean](#boolean) {data-toc-label='isSpectator'}
+### isSpectator() -> [Boolean](#boolean) {data-toc-label='isSpectator'}
 
 Returns whether the player is in spectator mode.
 
-### getName(): [String](#string) {data-toc-label='getName'}
+### getName() -> [String](#string) {data-toc-label='getName'}
 
 Returns the name of the player.
 
-### getUUID(): [String](#string) {data-toc-label='getUUID'}
+### getUUID() -> [String](#string) {data-toc-label='getUUID'}
 
 Returns the UUID of the player.
 
 ## PlayerManager
 
-### areCheatsEnabled(): [Boolean](#boolean) {data-toc-label='areCheatsEnabled'}
+### areCheatsEnabled() -> [Boolean](#boolean) {data-toc-label='areCheatsEnabled'}
 
 Returns whether cheats are enabled.
 
-### getCurrentPlayerCount(): [Integer](#integer) {data-toc-label='getCurrentPlayerCount'}
+### getCurrentPlayerCount() -> [Integer](#integer) {data-toc-label='getCurrentPlayerCount'}
 
 Returns the current amount of players.
 
-### getMaxPlayerCount(): [Integer](#integer) {data-toc-label='getMaxPlayerCount'}
+### getMaxPlayerCount() -> [Integer](#integer) {data-toc-label='getMaxPlayerCount'}
 
 Returns the max player count.
 
-### getSimulationDistance(): [Integer](#integer) {data-toc-label='getSimulationDistance'}
+### getSimulationDistance() -> [Integer](#integer) {data-toc-label='getSimulationDistance'}
 
 Returns the simulation distance.
 
-### getViewDistance(): [Integer](#integer) {data-toc-label='getViewDistance'}
+### getViewDistance() -> [Integer](#integer) {data-toc-label='getViewDistance'}
 
 Returns the view distance.
 
-### isWhitelistEnabled(): [Boolean](#boolean) {data-toc-label='isWhitelistEnabled'}
+### isWhitelistEnabled() -> [Boolean](#boolean) {data-toc-label='isWhitelistEnabled'}
 
 Returns whether whitelist is enabled.
 
-### setCheatsEnabled(cheats_enabled: [Boolean](#boolean)): [Null](#null) {data-toc-label='setCheatsEnabled'}
+### setCheatsEnabled(cheats_enabled: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setCheatsEnabled'}
 
 Sets cheats to be enabled according to `cheats_enabled`.
 
-### setSimulationDistance(simulation_distance: [Boolean](#boolean)): [Null](#null) {data-toc-label='setSimulationDistance'}
+### setSimulationDistance(simulation_distance: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setSimulationDistance'}
 
 Sets the simulation distance according to `simulation_distance`.
 
-### setViewDistance(view_distance: [Boolean](#boolean)): [Null](#null) {data-toc-label='setViewDistance'}
+### setViewDistance(view_distance: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setViewDistance'}
 
 Sets the view distance according to `view_distance`.
 
-### setWhitelistEnabled(whitelist_enabled: [Boolean](#boolean)): [Null](#null) {data-toc-label='setWhitelistEnabled'}
+### setWhitelistEnabled(whitelist_enabled: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='setWhitelistEnabled'}
 
 Sets whitelist to be enabled according to `whitelist_enabled`.
 
-### getPlayer(name: [String](#string)): [Null](#null) {data-toc-label='getPlayer'}
+### getPlayer(name: [String](#string)) -> [Null](#null) {data-toc-label='getPlayer'}
 
 Returns the player with the name `name`.
-
-## Resource
-
-Represents an identifier.
-
-Example:
-```dart
-var x = namespace:path;
-```
 
 ## ServerPlayerEntity
 
 Represents a player on the server level. Extends from [PlayerEntity](#playerentity)
 
-### changeGameMode(game_mode: [GameMode](#gamemodes)): [Null](#null) {data-toc-label='changeGameMode'}
+### setGameMode(game_mode: [GameMode](#gamemodes)) -> [Null](#null) {data-toc-label='setGameMode'}
 
 Changes the players game mode based on `game_mode`.
 
-### dropSelectedItem(): [Null](#null) {data-toc-label='dropSelectedItem'}
+### dropSelectedItem() -> [Null](#null) {data-toc-label='dropSelectedItem'}
 
 Drops the players selected item.
 
-### getViewDistance(): [Integer](#integer) {data-toc-label='getViewDistance'}
+### getViewDistance() -> [Integer](#integer) {data-toc-label='getViewDistance'}
 
 Returns the players view distance.
 
-### setExperienceLevels(experience_levels: [Integer](#integer)): [Null](#null) {data-toc-label='setExperienceLevels'}
+### setExperienceLevels(experience_levels: [Integer](#integer)) -> [Null](#null) {data-toc-label='setExperienceLevels'}
 
 Sets the players experience levels to `experience_levels`.
 
-### setExperiencePoints(experience_points: [Integer](#integer)): [Null](#null) {data-toc-label='setExperiencePoints'}
+### setExperiencePoints(experience_points: [Integer](#integer)) -> [Null](#null) {data-toc-label='setExperiencePoints'}
 
 Sets the players experience points to `experience_points`.
 
@@ -1257,21 +1260,33 @@ var x = "Hello, World!";
 var unicode = "\u221A"; // √ (Square Root)
 ```
 
-### fromUnicode(unicode: [Integer](#integer)): [String](#string) {data-toc-label='startsWith'}
+### fromUnicode(unicode: [Integer](#integer)) -> [String](#string) {data-toc-label='startsWith'}
 
 Returns the unicode character from the unicode point `unicode`.
 
-### startsWith(prefix: [String](#string)): [Boolean](#boolean) {data-toc-label='startsWith'}
+### startsWith(prefix: [String](#string)) -> [Boolean](#boolean) {data-toc-label='startsWith'}
 
 Returns whether the string starts with `prefix`.
 
-### endsWith(suffix: [String](#string)): [Boolean](#boolean) {data-toc-label='endsWith'}
+### endsWith(suffix: [String](#string)) -> [Boolean](#boolean) {data-toc-label='endsWith'}
 
 Returns whether the string ends with `suffix`.
 
-### split(delimiter: [String](#string)): [List\[String\]](#list) {data-toc-label='split'}
+### split(delimiter: [String](#string)) -> [List\[String\]](#list) {data-toc-label='split'}
 
 Splits the string into a list of strings with the delimiter `delimiter`.
+
+### length() -> [Integer](#integer) {data-toc-label='length'}
+
+Returns the length of the string.
+
+### uppercase() -> [String](#string) {data-toc-label='uppercase'}
+
+Returns the string in all uppercase.
+
+### lowercase() -> [String](#string) {data-toc-label='lowercase'}
+
+Returns the string in all lowercase.
 
 ## Type
 
@@ -1297,71 +1312,71 @@ The z coordinate.
 
 Represents a world.
 
-### breakBlock(pos: [BlockPos](#blockpos), drop_items: [Boolean](#boolean)): [Null](#null) {data-toc-label='breakBlock'}
+### breakBlock(pos: [BlockPos](#blockpos), drop_items: [Boolean](#boolean)) -> [Null](#null) {data-toc-label='breakBlock'}
 
 Breaks the block at `pos` and drops the items if `drop_items` is true.
 
-### canSetBlock(block_pos: [BlockPos](#blockpos)): [Boolean](#boolean) {data-toc-label='canSetBlock'}
+### canSetBlock(block_pos: [BlockPos](#blockpos)) -> [Boolean](#boolean) {data-toc-label='canSetBlock'}
 
 Returns whether a block can be placed at `block_pos`.
 
-### getBlock(pos: [BlockPos](#blockpos)): [Block](#block) {data-toc-label='getBlock'}
+### getBlock(pos: [BlockPos](#blockpos)) -> [Block](#block) {data-toc-label='getBlock'}
 
 Returns the block at `pos`.
 
-### getTime(): [Integer](#integer) {data-toc-label='getTime'}
+### getTime() -> [Integer](#integer) {data-toc-label='getTime'}
 
 Returns the total time since the world was created.
 
-### getTimeOfDay(): [Integer](#integer) {data-toc-label='getTimeOfDay'}
+### getTimeOfDay() -> [Integer](#integer) {data-toc-label='getTimeOfDay'}
 
 Returns the time of day.
 
-### hasRain(block_pos: [BlockPos](#blockpos)): [Boolean](#boolean) {data-toc-label='hasRain'}
+### hasRain(block_pos: [BlockPos](#blockpos)) -> [Boolean](#boolean) {data-toc-label='hasRain'}
 
 Returns whether it is raining at `block_pos`.
 
-### isDay(): [Boolean](#boolean) {data-toc-label='isDay'}
+### isDay() -> [Boolean](#boolean) {data-toc-label='isDay'}
 
 Returns whether it is day.
 
-### isNight(): [Boolean](#boolean) {data-toc-label='isNight'}
+### isNight() -> [Boolean](#boolean) {data-toc-label='isNight'}
 
 Returns whether it is night.
 
-### isRaining(): [Boolean](#boolean) {data-toc-label='isRaining'}
+### isRaining() -> [Boolean](#boolean) {data-toc-label='isRaining'}
 
 Returns whether it is raining.
 
-### isThundering(): [Boolean](#boolean) {data-toc-label='isThundering'}
+### isThundering() -> [Boolean](#boolean) {data-toc-label='isThundering'}
 
 Returns whether it is thundering.
 
-### getPlayers(): [List\[Player\]](#list) {data-toc-label='getPlayers'}
+### getPlayers() -> [List\[Player\]](#list) {data-toc-label='getPlayers'}
 
 Returns the players in the world.
 
-### isFlat(): [Boolean](#boolean) {data-toc-label='isFlat'}
+### isFlat() -> [Boolean](#boolean) {data-toc-label='isFlat'}
 
 Returns whether the world is flat.
 
-### isSleepingEnabled(): [Boolean](#boolean) {data-toc-label='isSleepingEnabled'}
+### isSleepingEnabled() -> [Boolean](#boolean) {data-toc-label='isSleepingEnabled'}
 
 Returns whether sleeping is enabled.
 
-### getSeed(): [Integer](#integer) {data-toc-label='getSeed'}
+### getSeed() -> [Integer](#integer) {data-toc-label='getSeed'}
 
 Returns the seed.
 
-### setSpawnPos(spawn_pos: [BlockPos](#blockpos)): [Null](#null) {data-toc-label='setSpawnPos'}
+### setSpawnPos(spawn_pos: [BlockPos](#blockpos)) -> [Null](#null) {data-toc-label='setSpawnPos'}
 
 Sets the spawn position to `spawn_pos`.
 
-### setTimeOfDay(time_of_day: [Integer](#integer)): [Null](#null) {data-toc-label='setTimeOfDay'}
+### setTimeOfDay(time_of_day: [Integer](#integer)) -> [Null](#null) {data-toc-label='setTimeOfDay'}
 
 Sets the time of day to `time_of_day`.
 
-### placeBlock(block_pos: [BlockPos](#blockpos), block: [Block](#block)): [Null](#null) {data-toc-label='setBlock'}
+### placeBlock(block_pos: [BlockPos](#blockpos), block: [Block](#block)) -> [Null](#null) {data-toc-label='setBlock'}
 
 Places the block `block` at `block_pos`.
 
@@ -1369,27 +1384,27 @@ Places the block `block` at `block_pos`.
 
 Represents an entity's inventory.
 
-### contains(item: [Item](#item)): [Boolean](#boolean) {data-toc-label='contains'}
+### contains(item: [Item](#item)) -> [Boolean](#boolean) {data-toc-label='contains'}
 
 Returns whether the item is in the inventory.
 
-### count(item: [Item](#item)): [Integer](#integer) {data-toc-label='count'}
+### count(item: [Item](#item)) -> [Integer](#integer) {data-toc-label='count'}
 
 Returns how many of `item` is in the inventory.
 
-### getStack(slot: [Integer](#integer)): [ItemStack](#itemstack) {data-toc-label='getStack'}
+### getStack(slot: [Integer](#integer)) -> [ItemStack](#itemstack) {data-toc-label='getStack'}
 
 Returns the stack in the slot `slot`.
 
-### isEmpty(): [Boolean](#boolean) {data-toc-label='isEmpty'}
+### isEmpty() -> [Boolean](#boolean) {data-toc-label='isEmpty'}
 
 Returns whether the inventory is empty.
 
-### removeStack(stack: [ItemStack](#itemstack)): [Null](#null) {data-toc-label='removeStack'}
+### removeStack(stack: [ItemStack](#itemstack)) -> [Null](#null) {data-toc-label='removeStack'}
 
 Removes `stack` from the inventory.
 
-### setStack(slot: [Integer](#integer), stack: [ItemStack](#itemstack)): [Null](#null) {data-toc-label='setStack'}
+### setStack(slot: [Integer](#integer), stack: [ItemStack](#itemstack)) -> [Null](#null) {data-toc-label='setStack'}
 
 Sets the stack at slot `slot` to the stack `stack`.
 
@@ -1397,23 +1412,23 @@ Sets the stack at slot `slot` to the stack `stack`.
 
 [//]: # (See [Adding a Custom GUI]&#40;gui.md&#41; for more details.)
 
-### getInventory(): [Inventory](#inventory) {data-toc-label='getInventory'}
+### getInventory() -> [Inventory](#inventory) {data-toc-label='getInventory'}
 
 Returns the inventory of the GUI.
 
-### setInventory(inventory: [Inventory](#inventory)): [Null](#null) {data-toc-label='setInventory'}
+### setInventory(inventory: [Inventory](#inventory)) -> [Null](#null) {data-toc-label='setInventory'}
 
 Sets the contents of the GUI to be `inventory`.
 
-### getTitle(): [String](#string) {data-toc-label='getTitle'}
+### getTitle() -> [String](#string) {data-toc-label='getTitle'}
 
 Returns the title of the GUI.
 
-### onSlotClick(slot: [Integer](#integer), button: [Integer](#integer), gui: [GUI](#gui), player: [PlayerEntity](#playerentity)): [Boolean](#boolean) {data-toc-label='onSlotClick'}
+### onSlotClick(slot: [Integer](#integer), button: [Integer](#integer), gui: [GUI](#gui), player: [PlayerEntity](#playerentity)) -> [Boolean](#boolean) {data-toc-label='onSlotClick'}
 
 This method is called when a user clicks a slot. This method is meant to be overridden.
 
-### onClose(player: [PlayerEntity](#playerentity), gui: [GUI](#gui)): [Null](#null) {data-toc-label='onClose'}
+### onClose(player: [PlayerEntity](#playerentity), gui: [GUI](#gui)) -> [Null](#null) {data-toc-label='onClose'}
 
 This method is called when the user closes the GUI. This method is meant to be overridden.
 
