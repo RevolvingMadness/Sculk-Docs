@@ -9,6 +9,13 @@ var x: Integer = 1;
 print(x); // 1
 ```
 
+The type of a variable can be optionally be ignored.
+
+```java
+var x = 1;
+print(x); // 1
+```
+
 ### Without a Value
 
 If you don't specify a value, the variable defaults to [Null](stdlib.md#null).
@@ -18,23 +25,11 @@ var x: Integer;
 print(x); // null
 ```
 
-### Without a Specified Type
-
-If you don't specify a type, the variable automatically gives it the correct type.
-
-```java
-var x = 1;
-
-print(type(x)); // Integer
-
-x = "Invalid type"; // Error. However, this still cannot be done.
-```
-
 ## Assigning a Variable
 
 ```java
 var x: Integer = 1;
-print(x); // 2
+print(x); // 1
 x = 2;
 print(x); // 2
 

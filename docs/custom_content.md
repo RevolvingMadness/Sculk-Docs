@@ -45,10 +45,6 @@ Block settings have many different variables you can modify to customize the beh
 
 `burnable` determines whether the block is burnable.
 
-#### burnable
-
-`burnable` determines whether the block is burnable.
-
 #### pistonBehavior
 
 `pistonBehavior` determines what the block will do when a piston tries to push it.
@@ -103,6 +99,7 @@ In your `Datapack Name/data/namespace/loot_tables/blocks`, create a file named `
             "entries": [
                 {
                     "type": "minecraft:item",
+                    // minecraft:stone_bricks -> useful_calcite:calcite_bricks
                     "name": "useful_calcite:calcite_bricks"
                 }
             ],
@@ -111,8 +108,6 @@ In your `Datapack Name/data/namespace/loot_tables/blocks`, create a file named `
     ]
 }
 ```
-
-This loot table is the same as `stone_bricks.json` but modified to my needs.
 
 ### Making a Pickaxe Required to Drop Loot
 
@@ -137,6 +132,7 @@ In `Resourcepack Name/assets/datapack_namespace/blockstates` create a file named
 {
     "variants": {
         "": {
+            // minecraft:block/stone_bricks -> useful_calcite:block/calcite_bricks
             "model": "useful_calcite:block/calcite_bricks"
         }
     }
@@ -166,6 +162,7 @@ In `Resourcepack Name/assets/datapack_namespace/models/block` create a file name
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
+    // minecraft:block/stone_bricks -> useful_calcite:block/calcite_bricks
     "all": "useful_calcite:block/calcite_bricks"
   }
 }
@@ -179,6 +176,7 @@ In `Resourcepack Name/assets/datapack_namespace/models/item` create a file named
 
 ```dart
 {
+  // minecraft:block/stone_bricks -> useful_calcite:block/calcite_bricks
   "parent": "useful_calcite:block/calcite_bricks"
 }
 ```

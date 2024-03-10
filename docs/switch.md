@@ -21,16 +21,18 @@ switch (x) {
 ```dart title="load.sk"
 var x = 1;
 
-function toString(x) {
+function toString(x) -> String {
     return switch (x) {
         case 1 -> "one";
         case 2 -> "two";
         case 3 {
             print("x is three");
             
-            yield 3;
+            yield "three";
         }
         default -> "idk";
     };
 }
+
+print(toString(x)); // one
 ```
