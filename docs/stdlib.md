@@ -1,4 +1,4 @@
-# Sculk's Standard Library
+# Standard Library
 
 ## PI: [Float](#float) {data-toc-label='PI'}
 

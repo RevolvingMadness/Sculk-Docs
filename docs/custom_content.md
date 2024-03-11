@@ -12,14 +12,14 @@ In this example, we will be adding a calcite brick, similar to stone bricks but 
 
 In your `start` script add the following.
 
-```dart
+```dart title="start.sk"
 var brickSettings = BlockSettings.of(Blocks.get("stone_bricks")); // Copy the settings of stone bricks
 
 // If you want an item to be registered too, use registerWithItem otherwise just use register
 Blocks.registerWithItem(Block("calcite_bricks", brickSettings));
 ```
 
-Block settings have many different variables you can modify to customize the behaviour of your block. They are listed below.
+There are a few settings you can tweak to customize your block. They are listed below:
 
 #### hardness
 
@@ -81,11 +81,11 @@ The block will only be able to get pushed and not pulled even with a sticky pist
 
 `requiresTool` determines whether the block requires a tool to drop loot.
 
-### Adding Loot Drops
+### Adding a Loot Table
 
-In your `Datapack Name/data/namespace/loot_tables/blocks`, create a file named `<block id>.json`, where `<block id>` is the same as where you registered your block. For our example we will create a file called `calcite_bricks.json`. And type
+In `Datapack Name/data/namespace/loot_tables/blocks`, create a file named `<block id>.json`.
 
-```json
+```json title="calcite_bricks.json"
 {
     "type": "minecraft:block",
     "pools": [
@@ -99,7 +99,6 @@ In your `Datapack Name/data/namespace/loot_tables/blocks`, create a file named `
             "entries": [
                 {
                     "type": "minecraft:item",
-                    // minecraft:stone_bricks -> useful_calcite:calcite_bricks
                     "name": "useful_calcite:calcite_bricks"
                 }
             ],
@@ -111,9 +110,9 @@ In your `Datapack Name/data/namespace/loot_tables/blocks`, create a file named `
 
 ### Making a Pickaxe Required to Drop Loot
 
-To make the block break faster with a certain tool, create a file in `Datapack Name/data/minecraft/tags/blocks/mineable/<tool>.json` where `<tool>` is one of the following: `pickaxe`, `axe`, `shovel`, `sword`. And type
+To make the block break faster with a certain tool, create a file in `Datapack Name/data/minecraft/tags/blocks/mineable/<tool>.json` where `<tool>` is one of the following: `pickaxe`, `axe`, `shovel`, `sword`.
 
-```json
+```json title="pickaxe.json"
 {
     "replace": false,
     "values": [
@@ -126,16 +125,15 @@ To make the block break faster with a certain tool, create a file in `Datapack N
 
 #### Creating the Blockstates
 
-In `Resourcepack Name/assets/datapack_namespace/blockstates` create a file named `<block id>.json` where `<block id>` is the id of your block. And type
+In `Resourcepack Name/assets/datapack_namespace/blockstates` create a file named `<block id>.json`.
 
-```dart
+```dart title="calcite_bricks.json"
 {
-    "variants": {
-        "": {
-            // minecraft:block/stone_bricks -> useful_calcite:block/calcite_bricks
-            "model": "useful_calcite:block/calcite_bricks"
-        }
-    }
+  "variants": {
+      "": {
+          "model": "useful_calcite:block/calcite_bricks"
+      }
+  }
 }
 ```
 
@@ -143,9 +141,9 @@ Currently, blockstates are not supported but *may* in the future.
 
 #### Creating the Language File
 
-In `Resourcepack Name/assets/datapack_namespace/lang` create a file named `en_us.json`. You can replace `en_us` with any other language you want. And add
+In `Resourcepack Name/assets/datapack_namespace/lang` create a file named `en_us.json`. You can replace `en_us` with any other language you want.
 
-```dart
+```dart title="en_us.json"
 {
   "item.useful_calcite.calcite_bricks": "Calcite Bricks",
   "block.useful_calcite.calcite_bricks": "Calcite Bricks"
@@ -156,27 +154,27 @@ In `Resourcepack Name/assets/datapack_namespace/lang` create a file named `en_us
 
 ##### The Block Model
 
-In `Resourcepack Name/assets/datapack_namespace/models/block` create a file named `<block id>.json` where `<block id>` is the id of your block. And type
+In `Resourcepack Name/assets/datapack_namespace/models/block` create a file named `<block id>.json`.
 
-```dart
+```dart title="calcite_bricks.json"
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    // minecraft:block/stone_bricks -> useful_calcite:block/calcite_bricks
     "all": "useful_calcite:block/calcite_bricks"
   }
 }
 ```
 
-If you want an entirely different model you can use [Blockbench](https://www.blockbench.net/).
+You can use [Blockbench](https://www.blockbench.net/) for more complex models.
 
 ##### The Item Model
 
-In `Resourcepack Name/assets/datapack_namespace/models/item` create a file named `<block id>.json` where `<block id>` is the id of your block. And type
+If you didn't use `registerWithItem` you can skip this step.
 
-```dart
+In `Resourcepack Name/assets/datapack_namespace/models/item` create a file named `<block id>.json`.
+
+```dart title="calcite_bricks.json"
 {
-  // minecraft:block/stone_bricks -> useful_calcite:block/calcite_bricks
   "parent": "useful_calcite:block/calcite_bricks"
 }
 ```
@@ -191,13 +189,13 @@ In `Resourcepack Name/assets/datapack_namespace/textures/block` add your block t
 
 In your `start` script add the following.
 
-```dart
+```dart title="start.sk"
 var itemSettings = ItemSettings();
 
 Items.register(Item("my_item", itemSettings));
 ```
 
-Items settings have a couple different variables you can modify to customize the behaviour of your item. They are listed below.
+There are a few settings you can tweak to customize your item. They are listed below:
 
 ##### maxCount
 
@@ -215,9 +213,9 @@ Whether the item is immune to lava.
 
 ##### The Item Model
 
-In `Resourcepack Name/assets/datapack_namespace/models/item` create a file named `<item id>.json` where `<item id>` is the id of your item. And type
+In `Resourcepack Name/assets/datapack_namespace/models/item` create a file named `<item id>.json`.
 
-```dart
+```dart title="item_id.json"
 {
   "parent": "minecraft:item/generated",
   "textures": {

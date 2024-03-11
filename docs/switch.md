@@ -16,7 +16,7 @@ switch (x) {
 }
 ```
 
-# Switch Expression
+## Switch Expression
 
 ```dart title="load.sk"
 var x = 1;
