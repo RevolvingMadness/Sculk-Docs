@@ -18,7 +18,7 @@ print(x); // 1
 
 ### Without a Value
 
-If you don't specify a value, the variable defaults to [Null](stdlib.md#null).
+If you don't specify a value, the variable defaults to [Null](Standard Library/Classes/null.md).
 
 ```java
 var x: Integer;

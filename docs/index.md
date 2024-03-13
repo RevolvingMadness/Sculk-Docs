@@ -9,6 +9,5 @@ Sculk is a [Fabric](https://www.fabricmc.net) mod for Minecraft that adds a cust
 - [Events](events.md)
 - [Examples](examples.md)
 - [Import Statement](import.md)
-- [Standard Library](stdlib.md)
 - [Variable Declarations](variable_declaration.md)
 - [Writing Data to Entities](writing_data_to_entities.md)
